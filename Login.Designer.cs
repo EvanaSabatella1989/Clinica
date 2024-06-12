@@ -29,47 +29,47 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
+            txtUsuario = new TextBox();
+            txtContrasena = new TextBox();
+            lblUsuario = new Label();
+            lblContrasena = new Label();
             pictureBox1 = new PictureBox();
-            button1 = new Button();
+            btnIngresar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // txtUsuario
             // 
-            textBox1.Location = new Point(378, 53);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(110, 23);
-            textBox1.TabIndex = 0;
+            txtUsuario.Location = new Point(378, 53);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(110, 23);
+            txtUsuario.TabIndex = 0;
             // 
-            // textBox2
+            // txtContrasena
             // 
-            textBox2.Location = new Point(378, 107);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(110, 23);
-            textBox2.TabIndex = 1;
+            txtContrasena.Location = new Point(378, 107);
+            txtContrasena.Name = "txtContrasena";
+            txtContrasena.Size = new Size(110, 23);
+            txtContrasena.TabIndex = 1;
             // 
-            // label1
+            // lblUsuario
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(285, 61);
-            label1.Name = "label1";
-            label1.Size = new Size(47, 15);
-            label1.TabIndex = 2;
-            label1.Text = "Usuario";
-            label1.Click += label1_Click;
+            lblUsuario.AutoSize = true;
+            lblUsuario.Location = new Point(285, 61);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(47, 15);
+            lblUsuario.TabIndex = 2;
+            lblUsuario.Text = "Usuario";
+            lblUsuario.Click += label1_Click;
             // 
-            // label2
+            // lblContrasena
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(285, 110);
-            label2.Name = "label2";
-            label2.Size = new Size(67, 15);
-            label2.TabIndex = 3;
-            label2.Text = "Contraseña";
+            lblContrasena.AutoSize = true;
+            lblContrasena.Location = new Point(285, 110);
+            lblContrasena.Name = "lblContrasena";
+            lblContrasena.Size = new Size(67, 15);
+            lblContrasena.TabIndex = 3;
+            lblContrasena.Text = "Contraseña";
             // 
             // pictureBox1
             // 
@@ -80,27 +80,28 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
-            // button1
+            // btnIngresar
             // 
-            button1.Location = new Point(378, 167);
-            button1.Name = "button1";
-            button1.Size = new Size(110, 23);
-            button1.TabIndex = 5;
-            button1.Text = "Ingresar";
-            button1.UseVisualStyleBackColor = true;
+            btnIngresar.Location = new Point(378, 167);
+            btnIngresar.Name = "btnIngresar";
+            btnIngresar.Size = new Size(110, 23);
+            btnIngresar.TabIndex = 5;
+            btnIngresar.Text = "Ingresar";
+            btnIngresar.UseVisualStyleBackColor = true;
+            btnIngresar.Click += button1_Click;
             // 
-            // Form1
+            // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(520, 222);
-            Controls.Add(button1);
+            Controls.Add(btnIngresar);
             Controls.Add(pictureBox1);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Name = "Form1";
+            Controls.Add(lblContrasena);
+            Controls.Add(lblUsuario);
+            Controls.Add(txtContrasena);
+            Controls.Add(txtUsuario);
+            Name = "Login";
             Text = "Ingreso Clinica SePrice";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -110,11 +111,11 @@
 
         #endregion
 
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label label1;
-        private Label label2;
+        private TextBox txtUsuario;
+        private TextBox txtContrasena;
+        private Label lblUsuario;
+        private Label lblContrasena;
         private PictureBox pictureBox1;
-        private Button button1;
+        private Button btnIngresar;
     }
 }

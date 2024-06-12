@@ -20,16 +20,11 @@ namespace Clinica_SePrice.Datos
                 MySqlCommand comando = new MySqlCommand("NuevoPaciente", sqlConn);
                 comando.CommandType = CommandType.StoredProcedure;
 
-                comando.Parameters.Add("idP", MySqlDbType.VarChar).Value =
-                    0;
-                comando.Parameters.Add("Nom", MySqlDbType.VarChar).Value =
-                    paciente.Nombre;
-                comando.Parameters.Add("Ape", MySqlDbType.VarChar).Value =
-                    paciente.Apellido;
-                comando.Parameters.Add("Dni", MySqlDbType.Int32).Value =
-                    paciente.Dni;
-                comando.Parameters.Add("Fnac", MySqlDbType.Date).Value =
-                   paciente.FechaNac;
+                comando.Parameters.Add("idP", MySqlDbType.VarChar).Value = 0;
+               // comando.Parameters.Add("Nom", MySqlDbType.VarChar).Value = paciente.Nombre;
+               // comando.Parameters.Add("Ape", MySqlDbType.VarChar).Value = paciente.Apellido;
+               // comando.Parameters.Add("Dni", MySqlDbType.Int32).Value = paciente.Dni;
+               // comando.Parameters.Add("Fnac", MySqlDbType.Date).Value = paciente.FechaNac;
                 //comando.Parameters.Add("Afis", MySqlDbType.Bit).Value = paciente.AptoFisico;
 
                 MySqlParameter ParCodigo = new MySqlParameter();
