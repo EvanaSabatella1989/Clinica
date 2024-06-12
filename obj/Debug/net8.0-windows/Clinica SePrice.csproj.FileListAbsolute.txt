@@ -35,3 +35,43 @@ C:\Users\Usuario\OneDrive\Escritorio\Clinica SePrice\obj\Debug\net8.0-windows\Cl
 C:\Users\Usuario\OneDrive\Escritorio\Clinica SePrice\obj\Debug\net8.0-windows\ref\Clinica SePrice.dll
 C:\Users\Usuario\OneDrive\Escritorio\Clinica SePrice\obj\Debug\net8.0-windows\Clinica_SePrice.Agenda.resources
 C:\Users\Usuario\OneDrive\Escritorio\Clinica SePrice\obj\Debug\net8.0-windows\Clinica_SePrice.GenerarTurno.resources
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\Clinica SePrice.exe
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\Clinica SePrice.deps.json
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\Clinica SePrice.runtimeconfig.json
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\Clinica SePrice.dll
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\Clinica SePrice.pdb
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\BouncyCastle.Cryptography.dll
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\Google.Protobuf.dll
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\K4os.Compression.LZ4.dll
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\K4os.Compression.LZ4.Streams.dll
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\K4os.Hash.xxHash.dll
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\MySql.Data.dll
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\System.IO.Pipelines.dll
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\ZstdSharp.dll
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\runtimes\win-x64\native\comerr64.dll
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\runtimes\win-x64\native\gssapi64.dll
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\runtimes\win-x64\native\k5sprt64.dll
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
+C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.csproj.AssemblyReference.cache
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.Agenda.resources
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.GenerarTurno.resources
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.Login.resources
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.Menu.resources
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.Properties.Resources.resources
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.RegistrarPaciente.resources
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.Seccion.resources
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.csproj.GenerateResource.cache
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.AssemblyInfoInputs.cache
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.AssemblyInfo.cs
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.csproj.CoreCompileInputs.cache
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.sourcelink.json
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica .8D895F5D.Up2Date
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.dll
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\refint\Clinica SePrice.dll
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.pdb
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.genruntimeconfig.cache
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\ref\Clinica SePrice.dll
+C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmGestionarInsumos.resources
+C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmAgregarInsumo.resources

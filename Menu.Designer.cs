@@ -31,7 +31,7 @@
             btnTurnos = new Button();
             label1 = new Label();
             label2 = new Label();
-            button2 = new Button();
+            btnGestionDeInsumos = new Button();
             button3 = new Button();
             SuspendLayout();
             // 
@@ -64,14 +64,15 @@
             label2.Text = "Nombre de usuario";
             label2.Click += label2_Click;
             // 
-            // button2
+            // btnGestionDeInsumos
             // 
-            button2.Location = new Point(34, 118);
-            button2.Name = "button2";
-            button2.Size = new Size(166, 23);
-            button2.TabIndex = 3;
-            button2.Text = "Gestión de insumos";
-            button2.UseVisualStyleBackColor = true;
+            btnGestionDeInsumos.Location = new Point(34, 118);
+            btnGestionDeInsumos.Name = "btnGestionDeInsumos";
+            btnGestionDeInsumos.Size = new Size(166, 23);
+            btnGestionDeInsumos.TabIndex = 3;
+            btnGestionDeInsumos.Text = "Gestión de Insumos";
+            btnGestionDeInsumos.UseVisualStyleBackColor = true;
+            btnGestionDeInsumos.Click += btnGestionDeInsumos_Click;
             // 
             // button3
             // 
@@ -88,7 +89,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(525, 233);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnGestionDeInsumos);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnTurnos);
@@ -103,7 +104,7 @@
         private Button btnTurnos;
         private Label label1;
         private Label label2;
-        private Button button2;
+        private Button btnGestionDeInsumos;
         private Button button3;
     }
 }
