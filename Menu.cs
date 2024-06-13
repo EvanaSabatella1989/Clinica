@@ -35,5 +35,12 @@ namespace Clinica_SePrice
             gestionarInsumosForm.Show();
 
         }
+
+        private void btnGestionEstudios_Click(object sender, EventArgs e)
+        {
+            Form GestionDeEstudios = new frmGestionarEstudios();
+            GestionDeEstudios.Show();
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

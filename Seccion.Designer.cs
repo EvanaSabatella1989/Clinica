@@ -61,7 +61,7 @@
             btnEstudiosClinicos.Name = "btnEstudiosClinicos";
             btnEstudiosClinicos.Size = new Size(172, 23);
             btnEstudiosClinicos.TabIndex = 2;
-            btnEstudiosClinicos.Text = "Estudios cínicos";
+            btnEstudiosClinicos.Text = "Estudios clínicos";
             btnEstudiosClinicos.UseVisualStyleBackColor = true;
             btnEstudiosClinicos.Click += button1_Click;
             // 

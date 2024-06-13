@@ -4,10 +4,16 @@
     <Compile Update="Agenda.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AgregarEstudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AgregarInsumo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GenerarTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GestionarEstudios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GestionarInsumos.cs">

@@ -25,21 +25,55 @@ namespace Clinica_SePrice
             txtIdInsumo.Focus();
         }
 
+        private void txtIdInsumo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCantidadInsumo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtNombreInsumo.Text) || 
+                string.IsNullOrWhiteSpace(txtIdInsumo.Text) ||
+                string.IsNullOrWhiteSpace(txtCantidadInsumo.Text))
+            {
+                MessageBox.Show("Todos los campos son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(txtIdInsumo.Text, out int idInsumo))
+            {
+                MessageBox.Show("El ID del insumo debe ser un número válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(txtCantidadInsumo.Text, out int cantidadInsumo))
+            {
+                MessageBox.Show("La cantidad del insumo debe ser un número válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string nombreInsumo = txtNombreInsumo.Text;
-            int cantidadInsumo = Convert.ToInt32(txtCantidadInsumo.Text);
-            int idInsumo = Convert.ToInt32(txtIdInsumo.Text);
 
             DataGridViewRow fila = new DataGridViewRow();
-            fila.CreateCells(dgvInsumos); 
-            fila.Cells[0].Value = idInsumo; 
-            fila.Cells[1].Value = nombreInsumo; 
-            fila.Cells[2].Value = cantidadInsumo; 
+            fila.CreateCells(dgvInsumos);
+            fila.Cells[0].Value = idInsumo;
+            fila.Cells[1].Value = nombreInsumo;
+            fila.Cells[2].Value = cantidadInsumo;
 
-            dgvInsumos.Rows.Add(fila); 
+            dgvInsumos.Rows.Add(fila);
 
-            this.Close(); 
+            this.Close();
         }
     }
 }

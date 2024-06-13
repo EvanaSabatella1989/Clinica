@@ -75,3 +75,5 @@ C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.gen
 C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\ref\Clinica SePrice.dll
 C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmGestionarInsumos.resources
 C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmAgregarInsumo.resources
+C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmAgregarEstudio.resources
+C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmGestionarEstudios.resources

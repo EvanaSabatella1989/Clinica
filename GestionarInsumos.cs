@@ -23,7 +23,6 @@ namespace Clinica_SePrice
             {
                 row.ReadOnly = true;
             }
-
         }
 
         private void btnAgregarInsumo_Click(object sender, EventArgs e)
