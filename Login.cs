@@ -33,7 +33,8 @@ namespace Clinica_SePrice
                 Form menu = new Menu();
                 menu.Show();
                 //this.Hide();
-                this.WindowState = FormWindowState.Minimized;
+                //this.WindowState = FormWindowState.Minimized;
+                this.Hide();
                 //ShowInTaskbar = true;
 
 

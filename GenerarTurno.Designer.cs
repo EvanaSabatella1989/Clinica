@@ -28,155 +28,179 @@
         /// </summary>
         private void InitializeComponent()
         {
-            menuStrip1 = new MenuStrip();
-            Especialidades = new ToolStripMenuItem();
-            oftalmologíaToolStripMenuItem = new ToolStripMenuItem();
-            dermatologíaToolStripMenuItem = new ToolStripMenuItem();
-            flebologíaToolStripMenuItem = new ToolStripMenuItem();
-            cardiologíaToolStripMenuItem = new ToolStripMenuItem();
-            pediatríaToolStripMenuItem = new ToolStripMenuItem();
-            diabetologíaToolStripMenuItem = new ToolStripMenuItem();
-            menuStrip2 = new MenuStrip();
-            médicosToolStripMenuItem = new ToolStripMenuItem();
-            gómezHéctorToolStripMenuItem = new ToolStripMenuItem();
-            acostaSilvanaToolStripMenuItem = new ToolStripMenuItem();
-            sanchezJuanToolStripMenuItem = new ToolStripMenuItem();
-            monthCalendar1 = new MonthCalendar();
-            menuStrip1.SuspendLayout();
-            menuStrip2.SuspendLayout();
+            lblEspecialidad = new Label();
+            comboBoxEspecialidad = new ComboBox();
+            lblInfoEspecialidad = new Label();
+            lblMedico = new Label();
+            comboBoxMedico = new ComboBox();
+            lblInfoMedico = new Label();
+            dateTimePicker = new DateTimePicker();
+            listBox = new ListBox();
+            btnConfirmaTurno = new Button();
+            btnCancelarTurno = new Button();
+            label1 = new Label();
+            textBoxDni = new TextBox();
+            btnVerificarDni = new Button();
             SuspendLayout();
             // 
-            // menuStrip1
+            // lblEspecialidad
             // 
-            menuStrip1.Dock = DockStyle.None;
-            menuStrip1.GripStyle = ToolStripGripStyle.Visible;
-            menuStrip1.Items.AddRange(new ToolStripItem[] { Especialidades });
-            menuStrip1.Location = new Point(83, 24);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(96, 24);
-            menuStrip1.TabIndex = 1;
-            menuStrip1.Text = "menuStrip1";
-            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
+            lblEspecialidad.AutoSize = true;
+            lblEspecialidad.Location = new Point(53, 88);
+            lblEspecialidad.Name = "lblEspecialidad";
+            lblEspecialidad.Size = new Size(75, 15);
+            lblEspecialidad.TabIndex = 0;
+            lblEspecialidad.Text = "Especialidad:";
             // 
-            // Especialidades
+            // comboBoxEspecialidad
             // 
-            Especialidades.DropDownItems.AddRange(new ToolStripItem[] { oftalmologíaToolStripMenuItem, dermatologíaToolStripMenuItem, flebologíaToolStripMenuItem, cardiologíaToolStripMenuItem, pediatríaToolStripMenuItem, diabetologíaToolStripMenuItem });
-            Especialidades.Name = "Especialidades";
-            Especialidades.Size = new Size(84, 20);
-            Especialidades.Text = "Especialidad";
+            comboBoxEspecialidad.FormattingEnabled = true;
+            comboBoxEspecialidad.Items.AddRange(new object[] { "Diabetes", "Cardiología", "Dermatología", "Oftalmología" });
+            comboBoxEspecialidad.Location = new Point(147, 85);
+            comboBoxEspecialidad.Name = "comboBoxEspecialidad";
+            comboBoxEspecialidad.Size = new Size(121, 23);
+            comboBoxEspecialidad.TabIndex = 1;
+            comboBoxEspecialidad.SelectedIndexChanged += comboBoxEspecialidad_SelectedIndexChanged;
             // 
-            // oftalmologíaToolStripMenuItem
+            // lblInfoEspecialidad
             // 
-            oftalmologíaToolStripMenuItem.Name = "oftalmologíaToolStripMenuItem";
-            oftalmologíaToolStripMenuItem.Size = new Size(180, 22);
-            oftalmologíaToolStripMenuItem.Text = "Oftalmología";
+            lblInfoEspecialidad.AutoSize = true;
+            lblInfoEspecialidad.Location = new Point(53, 117);
+            lblInfoEspecialidad.Name = "lblInfoEspecialidad";
+            lblInfoEspecialidad.Size = new Size(0, 15);
+            lblInfoEspecialidad.TabIndex = 2;
             // 
-            // dermatologíaToolStripMenuItem
+            // lblMedico
             // 
-            dermatologíaToolStripMenuItem.Name = "dermatologíaToolStripMenuItem";
-            dermatologíaToolStripMenuItem.Size = new Size(180, 22);
-            dermatologíaToolStripMenuItem.Text = "Dermatología";
+            lblMedico.AutoSize = true;
+            lblMedico.Location = new Point(53, 155);
+            lblMedico.Name = "lblMedico";
+            lblMedico.Size = new Size(47, 15);
+            lblMedico.TabIndex = 3;
+            lblMedico.Text = "Médico";
             // 
-            // flebologíaToolStripMenuItem
+            // comboBoxMedico
             // 
-            flebologíaToolStripMenuItem.Name = "flebologíaToolStripMenuItem";
-            flebologíaToolStripMenuItem.Size = new Size(180, 22);
-            flebologíaToolStripMenuItem.Text = "Flebología";
+            comboBoxMedico.FormattingEnabled = true;
+            comboBoxMedico.Items.AddRange(new object[] { "Gómez Juana", "Spada Cristina", "Stechina Alfredo", "Garay Noelia", "" });
+            comboBoxMedico.Location = new Point(147, 147);
+            comboBoxMedico.Name = "comboBoxMedico";
+            comboBoxMedico.Size = new Size(121, 23);
+            comboBoxMedico.TabIndex = 4;
+            comboBoxMedico.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
-            // cardiologíaToolStripMenuItem
+            // lblInfoMedico
             // 
-            cardiologíaToolStripMenuItem.Name = "cardiologíaToolStripMenuItem";
-            cardiologíaToolStripMenuItem.Size = new Size(180, 22);
-            cardiologíaToolStripMenuItem.Text = "Cardiología";
+            lblInfoMedico.AutoSize = true;
+            lblInfoMedico.Location = new Point(53, 192);
+            lblInfoMedico.Name = "lblInfoMedico";
+            lblInfoMedico.Size = new Size(0, 15);
+            lblInfoMedico.TabIndex = 5;
             // 
-            // pediatríaToolStripMenuItem
+            // dateTimePicker
             // 
-            pediatríaToolStripMenuItem.Name = "pediatríaToolStripMenuItem";
-            pediatríaToolStripMenuItem.Size = new Size(180, 22);
-            pediatríaToolStripMenuItem.Text = "Pediatría";
+            dateTimePicker.Location = new Point(53, 240);
+            dateTimePicker.Name = "dateTimePicker";
+            dateTimePicker.Size = new Size(200, 23);
+            dateTimePicker.TabIndex = 6;
+            dateTimePicker.ValueChanged += dateTimePicker_ValueChanged;
             // 
-            // diabetologíaToolStripMenuItem
+            // listBox
             // 
-            diabetologíaToolStripMenuItem.Name = "diabetologíaToolStripMenuItem";
-            diabetologíaToolStripMenuItem.Size = new Size(180, 22);
-            diabetologíaToolStripMenuItem.Text = "Diabetología";
+            listBox.FormattingEnabled = true;
+            listBox.ItemHeight = 15;
+            listBox.Location = new Point(278, 240);
+            listBox.Name = "listBox";
+            listBox.Size = new Size(120, 94);
+            listBox.TabIndex = 7;
+            listBox.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
-            // menuStrip2
+            // btnConfirmaTurno
             // 
-            menuStrip2.Dock = DockStyle.None;
-            menuStrip2.Items.AddRange(new ToolStripItem[] { médicosToolStripMenuItem });
-            menuStrip2.Location = new Point(83, 64);
-            menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(78, 24);
-            menuStrip2.TabIndex = 2;
-            menuStrip2.Text = "menuStrip2";
+            btnConfirmaTurno.Location = new Point(293, 351);
+            btnConfirmaTurno.Name = "btnConfirmaTurno";
+            btnConfirmaTurno.Size = new Size(75, 23);
+            btnConfirmaTurno.TabIndex = 8;
+            btnConfirmaTurno.Text = "Confirmar";
+            btnConfirmaTurno.UseVisualStyleBackColor = true;
+            btnConfirmaTurno.Click += btnConfirmaTurno_Click;
             // 
-            // médicosToolStripMenuItem
+            // btnCancelarTurno
             // 
-            médicosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { gómezHéctorToolStripMenuItem, acostaSilvanaToolStripMenuItem, sanchezJuanToolStripMenuItem });
-            médicosToolStripMenuItem.Name = "médicosToolStripMenuItem";
-            médicosToolStripMenuItem.Size = new Size(70, 20);
-            médicosToolStripMenuItem.Text = "Médica/o";
+            btnCancelarTurno.Location = new Point(125, 351);
+            btnCancelarTurno.Name = "btnCancelarTurno";
+            btnCancelarTurno.Size = new Size(75, 23);
+            btnCancelarTurno.TabIndex = 9;
+            btnCancelarTurno.Text = "Cancelar";
+            btnCancelarTurno.UseVisualStyleBackColor = true;
             // 
-            // gómezHéctorToolStripMenuItem
+            // label1
             // 
-            gómezHéctorToolStripMenuItem.Name = "gómezHéctorToolStripMenuItem";
-            gómezHéctorToolStripMenuItem.Size = new Size(180, 22);
-            gómezHéctorToolStripMenuItem.Text = "Gómez Héctor";
+            label1.AutoSize = true;
+            label1.Location = new Point(54, 36);
+            label1.Name = "label1";
+            label1.Size = new Size(30, 15);
+            label1.TabIndex = 10;
+            label1.Text = "DNI:";
+            label1.Click += label1_Click_1;
             // 
-            // acostaSilvanaToolStripMenuItem
+            // textBoxDni
             // 
-            acostaSilvanaToolStripMenuItem.Name = "acostaSilvanaToolStripMenuItem";
-            acostaSilvanaToolStripMenuItem.Size = new Size(180, 22);
-            acostaSilvanaToolStripMenuItem.Text = "Acosta Silvana";
+            textBoxDni.Location = new Point(147, 33);
+            textBoxDni.Name = "textBoxDni";
+            textBoxDni.Size = new Size(121, 23);
+            textBoxDni.TabIndex = 11;
             // 
-            // sanchezJuanToolStripMenuItem
+            // btnVerificarDni
             // 
-            sanchezJuanToolStripMenuItem.Name = "sanchezJuanToolStripMenuItem";
-            sanchezJuanToolStripMenuItem.Size = new Size(180, 22);
-            sanchezJuanToolStripMenuItem.Text = "Sanchez Juan";
-            // 
-            // monthCalendar1
-            // 
-            monthCalendar1.Location = new Point(93, 97);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 3;
+            btnVerificarDni.Location = new Point(312, 33);
+            btnVerificarDni.Name = "btnVerificarDni";
+            btnVerificarDni.Size = new Size(75, 23);
+            btnVerificarDni.TabIndex = 12;
+            btnVerificarDni.Text = "Verificar";
+            btnVerificarDni.UseVisualStyleBackColor = true;
+            btnVerificarDni.Click += btnVerificarDni_Click;
             // 
             // GenerarTurno
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(474, 419);
-            Controls.Add(monthCalendar1);
-            Controls.Add(menuStrip1);
-            Controls.Add(menuStrip2);
-            MainMenuStrip = menuStrip1;
+            Controls.Add(btnVerificarDni);
+            Controls.Add(textBoxDni);
+            Controls.Add(label1);
+            Controls.Add(btnCancelarTurno);
+            Controls.Add(btnConfirmaTurno);
+            Controls.Add(listBox);
+            Controls.Add(dateTimePicker);
+            Controls.Add(lblInfoMedico);
+            Controls.Add(comboBoxMedico);
+            Controls.Add(lblMedico);
+            Controls.Add(lblInfoEspecialidad);
+            Controls.Add(comboBoxEspecialidad);
+            Controls.Add(lblEspecialidad);
             Name = "GenerarTurno";
             Text = "GenerarTurno";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
-            menuStrip2.ResumeLayout(false);
-            menuStrip2.PerformLayout();
+            Load += GenerarTurno_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private Label lblInfoMedico;
+        private Label lblEspecialidad;
+        private ComboBox comboBoxEspecialidad;
+        private Label lblInfoEspecialidad;
+        private Label lblMedico;
+        private ComboBox comboBoxMedico;
+        private DateTimePicker dateTimePicker1;
+        private ListBox listBox;
+        private DateTimePicker dateTimePicker;
+        private Button btnConfirmaTurno;
+        private Button btnCancelarTurno;
         private Label label1;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem Especialidades;
-        private ToolStripMenuItem oftalmologíaToolStripMenuItem;
-        private ToolStripMenuItem dermatologíaToolStripMenuItem;
-        private ToolStripMenuItem flebologíaToolStripMenuItem;
-        private ToolStripMenuItem cardiologíaToolStripMenuItem;
-        private ToolStripMenuItem pediatríaToolStripMenuItem;
-        private ToolStripMenuItem diabetologíaToolStripMenuItem;
-        private MenuStrip menuStrip2;
-        private ToolStripMenuItem médicosToolStripMenuItem;
-        private ToolStripMenuItem gómezHéctorToolStripMenuItem;
-        private ToolStripMenuItem acostaSilvanaToolStripMenuItem;
-        private ToolStripMenuItem sanchezJuanToolStripMenuItem;
-        private MonthCalendar monthCalendar1;
+        private TextBox textBoxDni;
+        private Button btnVerificarDni;
     }
 }

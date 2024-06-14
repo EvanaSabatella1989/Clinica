@@ -12,6 +12,7 @@ namespace Clinica_SePrice
 {
     public partial class Seccion : Form
     {
+        
         public Seccion()
         {
             InitializeComponent();
@@ -21,7 +22,8 @@ namespace Clinica_SePrice
         {
             Form agenda = new Agenda();
             agenda.Show();
-            this.WindowState = FormWindowState.Minimized;
+           // this.WindowState = FormWindowState.Minimized;
+           this.Close();
         }
     }
 }

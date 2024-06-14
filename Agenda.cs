@@ -12,16 +12,25 @@ namespace Clinica_SePrice
 {
     public partial class Agenda : Form
     {
+        private object varDeFormSeccion;
         public Agenda()
         {
             InitializeComponent();
+           
+            
         }
 
         private void btnSolicitar_Click(object sender, EventArgs e)
         {
             Form generarTurno = new GenerarTurno();
             generarTurno.Show();
-            this.WindowState = FormWindowState.Minimized;
+            //this.WindowState = FormWindowState.Minimized;
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

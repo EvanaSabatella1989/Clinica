@@ -32,6 +32,7 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // btnSolicitar
@@ -71,11 +72,21 @@
             button4.Text = "Atrás";
             button4.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(48, 19);
+            label1.Name = "label1";
+            label1.Size = new Size(0, 15);
+            label1.TabIndex = 4;
+            label1.Click += label1_Click;
+            // 
             // Agenda
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(492, 243);
+            Controls.Add(label1);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -83,6 +94,7 @@
             Name = "Agenda";
             Text = "Agenda";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -91,5 +103,6 @@
         private Button button2;
         private Button button3;
         private Button button4;
+        private Label label1;
     }
 }
