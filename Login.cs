@@ -1,5 +1,15 @@
 using Clinica_SePrice.Datos;
 using System.Data;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Windows.Forms;
 
 namespace Clinica_SePrice
 {
@@ -25,27 +35,22 @@ namespace Clinica_SePrice
             Usuarios usuarios = new Usuarios();
             DataTable dt = new DataTable();
             Datos.Usuarios dato = new Datos.Usuarios();
-            //dt = dato.Login(txtUsuario.Text, txtContrasena.Text);
+            dt = dato.Login(txtUsuario.Text, txtContrasena.Text);
 
-           // if (dt.Rows.Count > 0)
-           // {
-                MessageBox.Show("Ingreso exitoso");
-                Form menu = new frmMenu();
-                menu.StartPosition = FormStartPosition.CenterScreen;
+            if (dt.Rows.Count > 0)
+            {
+                string nUsuario = dt.Rows[0][1] != null ? dt.Rows[0][1].ToString() : "N/A";
+                Form menu = new frmMenu(nUsuario);
+                menu.ShowDialog();
 
-                menu.Show();
-                //this.Hide();
-                this.WindowState = FormWindowState.Minimized;
-                //ShowInTaskbar = true;
-
-
-           // }
-           // else
-          //  {
-          //      MessageBox.Show("El usuario y/o contraseña incorrecto ");
+            }
+            else
+            {
+                MessageBox.Show("El usuario y/o contaseña incorrecto ");
 
 
-          //  }
+            }
+
         }
     }
 }

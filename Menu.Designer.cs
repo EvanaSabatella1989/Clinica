@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             btnTurnos = new Button();
-            label1 = new Label();
+            lblUsuario = new Label();
             label2 = new Label();
             btnGestionDeInsumos = new Button();
             button3 = new Button();
@@ -47,14 +47,14 @@
             btnTurnos.UseVisualStyleBackColor = true;
             btnTurnos.Click += button1_Click;
             // 
-            // label1
+            // lblUsuario
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(34, 21);
-            label1.Name = "label1";
-            label1.Size = new Size(66, 15);
-            label1.TabIndex = 1;
-            label1.Text = "Bienvenido";
+            lblUsuario.AutoSize = true;
+            lblUsuario.Location = new Point(34, 21);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new Size(66, 15);
+            lblUsuario.TabIndex = 1;
+            lblUsuario.Text = "Bienvenido";
             // 
             // label2
             // 
@@ -115,7 +115,7 @@
             Controls.Add(button3);
             Controls.Add(btnGestionDeInsumos);
             Controls.Add(label2);
-            Controls.Add(label1);
+            Controls.Add(lblUsuario);
             Controls.Add(btnTurnos);
             Name = "frmMenu";
             Text = "Menu";
@@ -126,7 +126,7 @@
         #endregion
 
         private Button btnTurnos;
-        private Label label1;
+        private Label lblUsuario;
         private Label label2;
         private Button btnGestionDeInsumos;
         private Button button3;
