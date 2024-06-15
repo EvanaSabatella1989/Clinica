@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using Clinica_SePrice.Datos;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Clinica_SePrice.Datos
 {
-    internal class Paciente
+    internal class Pacientes
     {
-        public string Nuevo_Paciente(Paciente paciente)
+        public static string NuevoPaciente(Paciente paciente)
         {
             string? salida;
             MySqlConnection sqlConn = new MySqlConnection();
@@ -21,11 +22,11 @@ namespace Clinica_SePrice.Datos
                 comando.CommandType = CommandType.StoredProcedure;
 
                 comando.Parameters.Add("idP", MySqlDbType.VarChar).Value = 0;
-               // comando.Parameters.Add("Nom", MySqlDbType.VarChar).Value = paciente.Nombre;
-               // comando.Parameters.Add("Ape", MySqlDbType.VarChar).Value = paciente.Apellido;
-               // comando.Parameters.Add("Dni", MySqlDbType.Int32).Value = paciente.Dni;
-               // comando.Parameters.Add("Fnac", MySqlDbType.Date).Value = paciente.FechaNac;
-                //comando.Parameters.Add("Afis", MySqlDbType.Bit).Value = paciente.AptoFisico;
+                comando.Parameters.Add("Nom", MySqlDbType.VarChar).Value = paciente.Nombre;
+                comando.Parameters.Add("Ape", MySqlDbType.VarChar).Value = paciente.Apellido;
+                comando.Parameters.Add("Dni", MySqlDbType.Int32).Value = paciente.Dni;
+                comando.Parameters.Add("Fnac", MySqlDbType.Date).Value = paciente.FechaNac;
+                //comando.Parameters.Add("Turno", MySqlDbType.Bit).Value = paciente.turnos;
 
                 MySqlParameter ParCodigo = new MySqlParameter();
 
