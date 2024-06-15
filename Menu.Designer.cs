@@ -1,6 +1,6 @@
 ﻿namespace Clinica_SePrice
 {
-    partial class Menu
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -31,8 +31,10 @@
             btnTurnos = new Button();
             label1 = new Label();
             label2 = new Label();
-            button2 = new Button();
+            btnGestionDeInsumos = new Button();
             button3 = new Button();
+            btnGestionEstudios = new Button();
+            btnListaEsperaEstudiosClinicos = new Button();
             SuspendLayout();
             // 
             // btnTurnos
@@ -64,14 +66,15 @@
             label2.Text = "Nombre de usuario";
             label2.Click += label2_Click;
             // 
-            // button2
+            // btnGestionDeInsumos
             // 
-            button2.Location = new Point(34, 118);
-            button2.Name = "button2";
-            button2.Size = new Size(166, 23);
-            button2.TabIndex = 3;
-            button2.Text = "Gestión de insumos";
-            button2.UseVisualStyleBackColor = true;
+            btnGestionDeInsumos.Location = new Point(34, 120);
+            btnGestionDeInsumos.Name = "btnGestionDeInsumos";
+            btnGestionDeInsumos.Size = new Size(166, 23);
+            btnGestionDeInsumos.TabIndex = 3;
+            btnGestionDeInsumos.Text = "Gestión de Insumos";
+            btnGestionDeInsumos.UseVisualStyleBackColor = true;
+            btnGestionDeInsumos.Click += btnGestionDeInsumos_Click;
             // 
             // button3
             // 
@@ -82,17 +85,39 @@
             button3.Text = "Salir";
             button3.UseVisualStyleBackColor = true;
             // 
-            // Menu
+            // btnGestionEstudios
+            // 
+            btnGestionEstudios.Location = new Point(34, 91);
+            btnGestionEstudios.Name = "btnGestionEstudios";
+            btnGestionEstudios.Size = new Size(166, 23);
+            btnGestionEstudios.TabIndex = 5;
+            btnGestionEstudios.Text = "Gestión de Estudios";
+            btnGestionEstudios.UseVisualStyleBackColor = true;
+            btnGestionEstudios.Click += btnGestionEstudios_Click;
+            // 
+            // btnListaEsperaEstudiosClinicos
+            // 
+            btnListaEsperaEstudiosClinicos.Location = new Point(34, 149);
+            btnListaEsperaEstudiosClinicos.Name = "btnListaEsperaEstudiosClinicos";
+            btnListaEsperaEstudiosClinicos.Size = new Size(166, 23);
+            btnListaEsperaEstudiosClinicos.TabIndex = 6;
+            btnListaEsperaEstudiosClinicos.Text = "Agenda Estudios Clínicos";
+            btnListaEsperaEstudiosClinicos.UseVisualStyleBackColor = true;
+            btnListaEsperaEstudiosClinicos.Click += btnListaEsperaEstudiosClinicos_Click;
+            // 
+            // frmMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(525, 233);
+            Controls.Add(btnListaEsperaEstudiosClinicos);
+            Controls.Add(btnGestionEstudios);
             Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btnGestionDeInsumos);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnTurnos);
-            Name = "Menu";
+            Name = "frmMenu";
             Text = "Menu";
             ResumeLayout(false);
             PerformLayout();
@@ -103,7 +128,9 @@
         private Button btnTurnos;
         private Label label1;
         private Label label2;
-        private Button button2;
+        private Button btnGestionDeInsumos;
         private Button button3;
+        private Button btnGestionEstudios;
+        private Button btnListaEsperaEstudiosClinicos;
     }
 }

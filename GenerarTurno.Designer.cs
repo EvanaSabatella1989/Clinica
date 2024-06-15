@@ -68,37 +68,37 @@
             // oftalmologíaToolStripMenuItem
             // 
             oftalmologíaToolStripMenuItem.Name = "oftalmologíaToolStripMenuItem";
-            oftalmologíaToolStripMenuItem.Size = new Size(180, 22);
+            oftalmologíaToolStripMenuItem.Size = new Size(146, 22);
             oftalmologíaToolStripMenuItem.Text = "Oftalmología";
             // 
             // dermatologíaToolStripMenuItem
             // 
             dermatologíaToolStripMenuItem.Name = "dermatologíaToolStripMenuItem";
-            dermatologíaToolStripMenuItem.Size = new Size(180, 22);
+            dermatologíaToolStripMenuItem.Size = new Size(146, 22);
             dermatologíaToolStripMenuItem.Text = "Dermatología";
             // 
             // flebologíaToolStripMenuItem
             // 
             flebologíaToolStripMenuItem.Name = "flebologíaToolStripMenuItem";
-            flebologíaToolStripMenuItem.Size = new Size(180, 22);
+            flebologíaToolStripMenuItem.Size = new Size(146, 22);
             flebologíaToolStripMenuItem.Text = "Flebología";
             // 
             // cardiologíaToolStripMenuItem
             // 
             cardiologíaToolStripMenuItem.Name = "cardiologíaToolStripMenuItem";
-            cardiologíaToolStripMenuItem.Size = new Size(180, 22);
+            cardiologíaToolStripMenuItem.Size = new Size(146, 22);
             cardiologíaToolStripMenuItem.Text = "Cardiología";
             // 
             // pediatríaToolStripMenuItem
             // 
             pediatríaToolStripMenuItem.Name = "pediatríaToolStripMenuItem";
-            pediatríaToolStripMenuItem.Size = new Size(180, 22);
+            pediatríaToolStripMenuItem.Size = new Size(146, 22);
             pediatríaToolStripMenuItem.Text = "Pediatría";
             // 
             // diabetologíaToolStripMenuItem
             // 
             diabetologíaToolStripMenuItem.Name = "diabetologíaToolStripMenuItem";
-            diabetologíaToolStripMenuItem.Size = new Size(180, 22);
+            diabetologíaToolStripMenuItem.Size = new Size(146, 22);
             diabetologíaToolStripMenuItem.Text = "Diabetología";
             // 
             // menuStrip2
@@ -121,19 +121,19 @@
             // gómezHéctorToolStripMenuItem
             // 
             gómezHéctorToolStripMenuItem.Name = "gómezHéctorToolStripMenuItem";
-            gómezHéctorToolStripMenuItem.Size = new Size(180, 22);
+            gómezHéctorToolStripMenuItem.Size = new Size(150, 22);
             gómezHéctorToolStripMenuItem.Text = "Gómez Héctor";
             // 
             // acostaSilvanaToolStripMenuItem
             // 
             acostaSilvanaToolStripMenuItem.Name = "acostaSilvanaToolStripMenuItem";
-            acostaSilvanaToolStripMenuItem.Size = new Size(180, 22);
+            acostaSilvanaToolStripMenuItem.Size = new Size(150, 22);
             acostaSilvanaToolStripMenuItem.Text = "Acosta Silvana";
             // 
             // sanchezJuanToolStripMenuItem
             // 
             sanchezJuanToolStripMenuItem.Name = "sanchezJuanToolStripMenuItem";
-            sanchezJuanToolStripMenuItem.Size = new Size(180, 22);
+            sanchezJuanToolStripMenuItem.Size = new Size(150, 22);
             sanchezJuanToolStripMenuItem.Text = "Sanchez Juan";
             // 
             // monthCalendar1

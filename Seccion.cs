@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Clinica_SePrice
 {
-    public partial class Seccion : Form
+    public partial class frmSeccion : Form
     {
-        public Seccion()
+        public frmSeccion()
         {
             InitializeComponent();
         }
@@ -22,6 +22,14 @@ namespace Clinica_SePrice
             Form agenda = new Agenda();
             agenda.Show();
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnEstudiosClinicos_Click(object sender, EventArgs e)
+        {
+            Form agendarTurnoEstudios = new frmAgendarTurnoEstudios();
+            agendarTurnoEstudios.StartPosition = FormStartPosition.CenterScreen;
+            agendarTurnoEstudios.Show();
+            this.Close();
         }
     }
 }

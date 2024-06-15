@@ -19,11 +19,11 @@ namespace Clinica_SePrice.Datos
 
         public Conexion()
         {
-            this.baseDatos = "proyecto";
+            this.baseDatos = "clinica_seprice";
             this.servidor = "localhost";
-            this.puerto = "3306";
+            this.puerto = "3307";
             this.usuario = "root";
-            this.clave = "root";
+            this.clave = "1234";
         }
         // proceso de interacción
         public MySqlConnection CrearConexion()

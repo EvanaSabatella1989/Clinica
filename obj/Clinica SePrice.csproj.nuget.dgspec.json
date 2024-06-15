@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Clinica SePrice\\Clinica SePrice.csproj": {}
+    "C:\\Users\\mstei\\source\\repos\\Clinica\\Clinica SePrice.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Clinica SePrice\\Clinica SePrice.csproj": {
+    "C:\\Users\\mstei\\source\\repos\\Clinica\\Clinica SePrice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Clinica SePrice\\Clinica SePrice.csproj",
+        "projectUniqueName": "C:\\Users\\mstei\\source\\repos\\Clinica\\Clinica SePrice.csproj",
         "projectName": "Clinica SePrice",
-        "projectPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Clinica SePrice\\Clinica SePrice.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\OneDrive\\Escritorio\\Clinica SePrice\\obj\\",
+        "projectPath": "C:\\Users\\mstei\\source\\repos\\Clinica\\Clinica SePrice.csproj",
+        "packagesPath": "C:\\Users\\mstei\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mstei\\source\\repos\\Clinica\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mstei\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -69,7 +74,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

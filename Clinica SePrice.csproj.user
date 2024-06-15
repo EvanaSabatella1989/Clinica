@@ -1,16 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="AcreditarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Agenda.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AgendaEstudiosClinicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AgendarTurnoEstudios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AgregarEstudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AgregarInsumo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AgregarPacienteLaboratorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ComprobanteEstudio.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="GenerarTurno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GestionarEstudios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GestionarInsumos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="PacientePrioritario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="RegistrarPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Seccion.cs">
