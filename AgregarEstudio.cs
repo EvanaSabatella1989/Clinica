@@ -35,6 +35,12 @@ namespace Clinica_SePrice
                 MessageBox.Show("Debe seleccionar un tipo de estudio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return; 
             }
+            int dniPaciente;
+            if (!int.TryParse(txtDniPaciente.Text, out dniPaciente))
+            {
+                MessageBox.Show("El DNI del paciente debe ser un número válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             string tipoEstudio = cmbTipoEstudio.SelectedItem.ToString();
             DateTime fechaEstudio = dtpFechaEstudio.Value;
@@ -43,7 +49,8 @@ namespace Clinica_SePrice
             fila.CreateCells(dgvEstudios);
             fila.Cells[0].Value = idEstudio;
             fila.Cells[1].Value = tipoEstudio;
-            fila.Cells[4].Value = fechaEstudio.ToShortDateString();
+            fila.Cells[2].Value = dniPaciente;
+            fila.Cells[5].Value = fechaEstudio.ToShortDateString();
             dgvEstudios.Rows.Add(fila);
 
             this.Close();

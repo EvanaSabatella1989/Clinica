@@ -1,6 +1,6 @@
 ﻿namespace Clinica_SePrice
 {
-    partial class Seccion
+    partial class frmSeccion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Seccion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSeccion));
             pictureBox1 = new PictureBox();
             pictureBox2 = new PictureBox();
-            btnEstudiosClinicos = new Button();
             btnConsultoriosExternos = new Button();
+            btnEstudiosClinicos = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -55,35 +55,36 @@
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
-            // btnEstudiosClinicos
-            // 
-            btnEstudiosClinicos.Location = new Point(57, 225);
-            btnEstudiosClinicos.Name = "btnEstudiosClinicos";
-            btnEstudiosClinicos.Size = new Size(172, 23);
-            btnEstudiosClinicos.TabIndex = 2;
-            btnEstudiosClinicos.Text = "Estudios clínicos";
-            btnEstudiosClinicos.UseVisualStyleBackColor = true;
-            btnEstudiosClinicos.Click += button1_Click;
-            // 
             // btnConsultoriosExternos
             // 
-            btnConsultoriosExternos.Location = new Point(290, 225);
+            btnConsultoriosExternos.Location = new Point(57, 225);
             btnConsultoriosExternos.Name = "btnConsultoriosExternos";
-            btnConsultoriosExternos.Size = new Size(168, 23);
-            btnConsultoriosExternos.TabIndex = 3;
+            btnConsultoriosExternos.Size = new Size(172, 23);
+            btnConsultoriosExternos.TabIndex = 2;
             btnConsultoriosExternos.Text = "Consultorios externos";
             btnConsultoriosExternos.UseVisualStyleBackColor = true;
+            btnConsultoriosExternos.Click += button1_Click;
             // 
-            // Seccion
+            // btnEstudiosClinicos
+            // 
+            btnEstudiosClinicos.Location = new Point(290, 225);
+            btnEstudiosClinicos.Name = "btnEstudiosClinicos";
+            btnEstudiosClinicos.Size = new Size(168, 23);
+            btnEstudiosClinicos.TabIndex = 3;
+            btnEstudiosClinicos.Text = "Estudios clínicos";
+            btnEstudiosClinicos.UseVisualStyleBackColor = true;
+            btnEstudiosClinicos.Click += btnEstudiosClinicos_Click;
+            // 
+            // frmSeccion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(525, 263);
-            Controls.Add(btnConsultoriosExternos);
             Controls.Add(btnEstudiosClinicos);
+            Controls.Add(btnConsultoriosExternos);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
-            Name = "Seccion";
+            Name = "frmSeccion";
             Text = "Seccion";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -94,7 +95,7 @@
 
         private PictureBox pictureBox1;
         private PictureBox pictureBox2;
-        private Button btnEstudiosClinicos;
         private Button btnConsultoriosExternos;
+        private Button btnEstudiosClinicos;
     }
 }

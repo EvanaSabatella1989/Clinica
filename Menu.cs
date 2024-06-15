@@ -10,16 +10,20 @@ using System.Windows.Forms;
 
 namespace Clinica_SePrice
 {
-    public partial class Menu : Form
+    public partial class frmMenu : Form
     {
-        public Menu()
+        private frmGestionarInsumos gestionarInsumosForm;
+
+        public frmMenu()
         {
             InitializeComponent();
+            gestionarInsumosForm = new frmGestionarInsumos(); 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form seccion = new Seccion();
+            Form seccion = new frmSeccion();
+            seccion.StartPosition = FormStartPosition.CenterScreen;
             seccion.Show();
             this.WindowState = FormWindowState.Minimized;
         }
@@ -31,16 +35,23 @@ namespace Clinica_SePrice
 
         private void btnGestionDeInsumos_Click(object sender, EventArgs e)
         {
-            frmGestionarInsumos gestionarInsumosForm = new frmGestionarInsumos();
+            gestionarInsumosForm.StartPosition = FormStartPosition.CenterScreen;
             gestionarInsumosForm.Show();
-
         }
 
         private void btnGestionEstudios_Click(object sender, EventArgs e)
         {
             Form GestionDeEstudios = new frmGestionarEstudios();
+            GestionDeEstudios.StartPosition = FormStartPosition.CenterScreen;
             GestionDeEstudios.Show();
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnListaEsperaEstudiosClinicos_Click(object sender, EventArgs e)
+        {
+            frmAgendaEstudiosClinicos listaEsperaEstudiosClinicosForm = new frmAgendaEstudiosClinicos(gestionarInsumosForm);
+            listaEsperaEstudiosClinicosForm.StartPosition = FormStartPosition.CenterScreen;
+            listaEsperaEstudiosClinicosForm.Show();
         }
     }
 }

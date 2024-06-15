@@ -1,6 +1,6 @@
 ﻿namespace Clinica_SePrice
 {
-    partial class Menu
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@
             btnGestionDeInsumos = new Button();
             button3 = new Button();
             btnGestionEstudios = new Button();
+            btnListaEsperaEstudiosClinicos = new Button();
             SuspendLayout();
             // 
             // btnTurnos
@@ -94,18 +95,29 @@
             btnGestionEstudios.UseVisualStyleBackColor = true;
             btnGestionEstudios.Click += btnGestionEstudios_Click;
             // 
-            // Menu
+            // btnListaEsperaEstudiosClinicos
+            // 
+            btnListaEsperaEstudiosClinicos.Location = new Point(34, 149);
+            btnListaEsperaEstudiosClinicos.Name = "btnListaEsperaEstudiosClinicos";
+            btnListaEsperaEstudiosClinicos.Size = new Size(166, 23);
+            btnListaEsperaEstudiosClinicos.TabIndex = 6;
+            btnListaEsperaEstudiosClinicos.Text = "Agenda Estudios Clínicos";
+            btnListaEsperaEstudiosClinicos.UseVisualStyleBackColor = true;
+            btnListaEsperaEstudiosClinicos.Click += btnListaEsperaEstudiosClinicos_Click;
+            // 
+            // frmMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(525, 233);
+            Controls.Add(btnListaEsperaEstudiosClinicos);
             Controls.Add(btnGestionEstudios);
             Controls.Add(button3);
             Controls.Add(btnGestionDeInsumos);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnTurnos);
-            Name = "Menu";
+            Name = "frmMenu";
             Text = "Menu";
             ResumeLayout(false);
             PerformLayout();
@@ -119,5 +131,6 @@
         private Button btnGestionDeInsumos;
         private Button button3;
         private Button btnGestionEstudios;
+        private Button btnListaEsperaEstudiosClinicos;
     }
 }

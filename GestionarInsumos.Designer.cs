@@ -34,7 +34,7 @@
             CantidadInsumo = new DataGridViewTextBoxColumn();
             ReponerInsumo = new DataGridViewButtonColumn();
             btnAgregarInsumo = new Button();
-            btnVolverInsumos = new Button();
+            btnVolverMenu = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvInsumos).BeginInit();
             SuspendLayout();
             // 
@@ -84,22 +84,22 @@
             btnAgregarInsumo.UseVisualStyleBackColor = true;
             btnAgregarInsumo.Click += btnAgregarInsumo_Click;
             // 
-            // btnVolverInsumos
+            // btnVolverMenu
             // 
-            btnVolverInsumos.Location = new Point(12, 23);
-            btnVolverInsumos.Name = "btnVolverInsumos";
-            btnVolverInsumos.Size = new Size(75, 23);
-            btnVolverInsumos.TabIndex = 2;
-            btnVolverInsumos.Text = "Volver";
-            btnVolverInsumos.UseVisualStyleBackColor = true;
-            btnVolverInsumos.Click += btnVolverInsumos_Click;
+            btnVolverMenu.Location = new Point(12, 23);
+            btnVolverMenu.Name = "btnVolverMenu";
+            btnVolverMenu.Size = new Size(102, 23);
+            btnVolverMenu.TabIndex = 2;
+            btnVolverMenu.Text = "Volver al menú";
+            btnVolverMenu.UseVisualStyleBackColor = true;
+            btnVolverMenu.Click += btnVolverMenu_Click;
             // 
             // frmGestionarInsumos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(720, 326);
-            Controls.Add(btnVolverInsumos);
+            Controls.Add(btnVolverMenu);
             Controls.Add(btnAgregarInsumo);
             Controls.Add(dgvInsumos);
             Name = "frmGestionarInsumos";
@@ -110,7 +110,7 @@
 
         #endregion
         private Button btnAgregarInsumo;
-        private Button btnVolverInsumos;
+        private Button btnVolverMenu;
         public DataGridView dgvInsumos;
         private DataGridViewTextBoxColumn IdInsumo;
         private DataGridViewTextBoxColumn NombreInsumo;

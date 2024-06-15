@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Clinica_SePrice
 {
-    public partial class RegistrarPaciente : Form
+    public partial class frmRegistrarPaciente : Form
     {
-        public RegistrarPaciente()
+        public frmRegistrarPaciente()
         {
             InitializeComponent();
         }
@@ -22,8 +22,8 @@ namespace Clinica_SePrice
             string nombreIngresado = txtNombrePaciente.Text;
             string apellidoIngresado = txtNombrePaciente.Text;
             string dniIngresado = txtDniPaciente.Text;
-            
-            if (nombreIngresado == "" || apellidoIngresado == "" ||  dniIngresado == "") 
+
+            if (nombreIngresado == "" || apellidoIngresado == "" || dniIngresado == "")
             {
                 MessageBox.Show("Por favor, complete todos los campos", "Registro Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -39,7 +39,12 @@ namespace Clinica_SePrice
                 }
             }
 
-            
+
+        }
+
+        private void btnVolverRegistrarPaciente_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

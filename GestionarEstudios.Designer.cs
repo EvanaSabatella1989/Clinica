@@ -31,11 +31,12 @@
             dgvEstudios = new DataGridView();
             IdEstudio = new DataGridViewTextBoxColumn();
             TipoEstudio = new DataGridViewTextBoxColumn();
+            DniPaciente = new DataGridViewTextBoxColumn();
             NombrePaciente = new DataGridViewTextBoxColumn();
             ApellidoPaciente = new DataGridViewTextBoxColumn();
             Fecha = new DataGridViewTextBoxColumn();
-            Acciones = new DataGridViewTextBoxColumn();
-            btnVolverGestionarEstudios = new Button();
+            Acciones = new DataGridViewButtonColumn();
+            btnVolverMenu = new Button();
             btnAgregarEstudio = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvEstudios).BeginInit();
             SuspendLayout();
@@ -43,11 +44,12 @@
             // dgvEstudios
             // 
             dgvEstudios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEstudios.Columns.AddRange(new DataGridViewColumn[] { IdEstudio, TipoEstudio, NombrePaciente, ApellidoPaciente, Fecha, Acciones });
-            dgvEstudios.Location = new Point(12, 99);
+            dgvEstudios.Columns.AddRange(new DataGridViewColumn[] { IdEstudio, TipoEstudio, DniPaciente, NombrePaciente, ApellidoPaciente, Fecha, Acciones });
+            dgvEstudios.Location = new Point(12, 80);
             dgvEstudios.Name = "dgvEstudios";
-            dgvEstudios.Size = new Size(725, 213);
+            dgvEstudios.Size = new Size(852, 213);
             dgvEstudios.TabIndex = 0;
+            dgvEstudios.CellContentClick += dgvEstudios_CellContentClick;
             // 
             // IdEstudio
             // 
@@ -59,6 +61,11 @@
             TipoEstudio.HeaderText = "Tipo";
             TipoEstudio.Name = "TipoEstudio";
             TipoEstudio.Width = 120;
+            // 
+            // DniPaciente
+            // 
+            DniPaciente.HeaderText = "DNI del paciente";
+            DniPaciente.Name = "DniPaciente";
             // 
             // NombrePaciente
             // 
@@ -81,22 +88,25 @@
             // 
             Acciones.HeaderText = "Acciones";
             Acciones.Name = "Acciones";
+            Acciones.Resizable = DataGridViewTriState.True;
+            Acciones.SortMode = DataGridViewColumnSortMode.Automatic;
+            Acciones.Width = 130;
             // 
-            // btnVolverGestionarEstudios
+            // btnVolverMenu
             // 
-            btnVolverGestionarEstudios.Location = new Point(12, 24);
-            btnVolverGestionarEstudios.Name = "btnVolverGestionarEstudios";
-            btnVolverGestionarEstudios.Size = new Size(75, 23);
-            btnVolverGestionarEstudios.TabIndex = 1;
-            btnVolverGestionarEstudios.Text = "Volver";
-            btnVolverGestionarEstudios.UseVisualStyleBackColor = true;
-            btnVolverGestionarEstudios.Click += btnVolverGestionarEstudios_Click;
+            btnVolverMenu.Location = new Point(12, 24);
+            btnVolverMenu.Name = "btnVolverMenu";
+            btnVolverMenu.Size = new Size(111, 23);
+            btnVolverMenu.TabIndex = 1;
+            btnVolverMenu.Text = "Volver al menú";
+            btnVolverMenu.UseVisualStyleBackColor = true;
+            btnVolverMenu.Click += btnVolverMenu_Click;
             // 
             // btnAgregarEstudio
             // 
-            btnAgregarEstudio.Location = new Point(611, 24);
+            btnAgregarEstudio.Location = new Point(729, 24);
             btnAgregarEstudio.Name = "btnAgregarEstudio";
-            btnAgregarEstudio.Size = new Size(123, 23);
+            btnAgregarEstudio.Size = new Size(135, 41);
             btnAgregarEstudio.TabIndex = 2;
             btnAgregarEstudio.Text = "Agregar estudio";
             btnAgregarEstudio.UseVisualStyleBackColor = true;
@@ -106,9 +116,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(746, 324);
+            ClientSize = new Size(874, 324);
             Controls.Add(btnAgregarEstudio);
-            Controls.Add(btnVolverGestionarEstudios);
+            Controls.Add(btnVolverMenu);
             Controls.Add(dgvEstudios);
             Name = "frmGestionarEstudios";
             Text = "GestionarEstudios";
@@ -119,13 +129,14 @@
         #endregion
 
         private DataGridView dgvEstudios;
+        private Button btnVolverMenu;
+        private Button btnAgregarEstudio;
         private DataGridViewTextBoxColumn IdEstudio;
         private DataGridViewTextBoxColumn TipoEstudio;
+        private DataGridViewTextBoxColumn DniPaciente;
         private DataGridViewTextBoxColumn NombrePaciente;
         private DataGridViewTextBoxColumn ApellidoPaciente;
         private DataGridViewTextBoxColumn Fecha;
-        private DataGridViewTextBoxColumn Acciones;
-        private Button btnVolverGestionarEstudios;
-        private Button btnAgregarEstudio;
+        private DataGridViewButtonColumn Acciones;
     }
 }

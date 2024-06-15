@@ -30,7 +30,9 @@ namespace Clinica_SePrice
            // if (dt.Rows.Count > 0)
            // {
                 MessageBox.Show("Ingreso exitoso");
-                Form menu = new Menu();
+                Form menu = new frmMenu();
+                menu.StartPosition = FormStartPosition.CenterScreen;
+
                 menu.Show();
                 //this.Hide();
                 this.WindowState = FormWindowState.Minimized;
@@ -40,7 +42,7 @@ namespace Clinica_SePrice
            // }
            // else
           //  {
-          //      MessageBox.Show("El usuario y/o contaseña incorrecto ");
+          //      MessageBox.Show("El usuario y/o contraseña incorrecto ");
 
 
           //  }

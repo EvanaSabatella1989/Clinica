@@ -30,10 +30,10 @@
         {
             lblIdEstudio = new Label();
             lblTipoEstudio = new Label();
-            lblIdPaciente = new Label();
+            lblDniPaciente = new Label();
             txtIdEstudio = new TextBox();
             cmbTipoEstudio = new ComboBox();
-            idPaciente = new TextBox();
+            txtDniPaciente = new TextBox();
             btnAgregarEstudio = new Button();
             lblFechaEstudio = new Label();
             dtpFechaEstudio = new DateTimePicker();
@@ -57,14 +57,14 @@
             lblTipoEstudio.TabIndex = 1;
             lblTipoEstudio.Text = "Tipo de estudio";
             // 
-            // lblIdPaciente
+            // lblDniPaciente
             // 
-            lblIdPaciente.AutoSize = true;
-            lblIdPaciente.Location = new Point(37, 140);
-            lblIdPaciente.Name = "lblIdPaciente";
-            lblIdPaciente.Size = new Size(84, 15);
-            lblIdPaciente.TabIndex = 2;
-            lblIdPaciente.Text = "Id del paciente";
+            lblDniPaciente.AutoSize = true;
+            lblDniPaciente.Location = new Point(37, 140);
+            lblDniPaciente.Name = "lblDniPaciente";
+            lblDniPaciente.Size = new Size(94, 15);
+            lblDniPaciente.TabIndex = 2;
+            lblDniPaciente.Text = "DNI del paciente";
             // 
             // txtIdEstudio
             // 
@@ -82,12 +82,12 @@
             cmbTipoEstudio.Size = new Size(157, 23);
             cmbTipoEstudio.TabIndex = 4;
             // 
-            // idPaciente
+            // txtDniPaciente
             // 
-            idPaciente.Location = new Point(178, 140);
-            idPaciente.Name = "idPaciente";
-            idPaciente.Size = new Size(157, 23);
-            idPaciente.TabIndex = 5;
+            txtDniPaciente.Location = new Point(178, 140);
+            txtDniPaciente.Name = "txtDniPaciente";
+            txtDniPaciente.Size = new Size(157, 23);
+            txtDniPaciente.TabIndex = 5;
             // 
             // btnAgregarEstudio
             // 
@@ -124,10 +124,10 @@
             Controls.Add(dtpFechaEstudio);
             Controls.Add(lblFechaEstudio);
             Controls.Add(btnAgregarEstudio);
-            Controls.Add(idPaciente);
+            Controls.Add(txtDniPaciente);
             Controls.Add(cmbTipoEstudio);
             Controls.Add(txtIdEstudio);
-            Controls.Add(lblIdPaciente);
+            Controls.Add(lblDniPaciente);
             Controls.Add(lblTipoEstudio);
             Controls.Add(lblIdEstudio);
             Name = "frmAgregarEstudio";
@@ -140,10 +140,10 @@
 
         private Label lblIdEstudio;
         private Label lblTipoEstudio;
-        private Label lblIdPaciente;
+        private Label lblDniPaciente;
         private TextBox txtIdEstudio;
         private ComboBox cmbTipoEstudio;
-        private TextBox idPaciente;
+        private TextBox txtDniPaciente;
         private Button btnAgregarEstudio;
         private Label lblFechaEstudio;
         private DateTimePicker dtpFechaEstudio;

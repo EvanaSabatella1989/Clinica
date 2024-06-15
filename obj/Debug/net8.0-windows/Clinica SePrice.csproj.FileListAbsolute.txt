@@ -57,10 +57,7 @@ C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.csp
 C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.Agenda.resources
 C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.GenerarTurno.resources
 C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.Login.resources
-C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.Menu.resources
 C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.Properties.Resources.resources
-C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.RegistrarPaciente.resources
-C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.Seccion.resources
 C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.csproj.GenerateResource.cache
 C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.AssemblyInfoInputs.cache
@@ -77,3 +74,12 @@ C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frm
 C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmAgregarInsumo.resources
 C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmAgregarEstudio.resources
 C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmGestionarEstudios.resources
+C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmComprobante.resources
+C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmAgregarPacienteLaboratorio.resources
+C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmRegistrarPaciente.resources
+C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmPacientePrioritario.resources
+C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmMenu.resources
+C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmAcreditarPaciente.resources
+C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmAgendarTurnoEstudios.resources
+C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmSeccion.resources
+C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmAgendaEstudiosClinicos.resources

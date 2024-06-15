@@ -11,18 +11,18 @@ namespace Clinica_SePrice.Entidades
         private int idEstudio;
         private string tipoEstudio;
         private DateTime fecha;
-        private int idPaciente; 
+        private int dniPaciente;
 
         public Estudio()
         {
         }
 
-        public Estudio(int idEstudio, string tipoEstudio, DateTime fecha, int idPaciente)
+        public Estudio(int idEstudio, string tipoEstudio, DateTime fecha, int dniPaciente)
         {
             this.idEstudio = idEstudio;
             this.tipoEstudio = tipoEstudio;
             this.fecha = fecha;
-            this.idPaciente = idPaciente;
+            this.dniPaciente = dniPaciente;
         }
 
         public int IdEstudio
@@ -43,10 +43,10 @@ namespace Clinica_SePrice.Entidades
             set { fecha = value; }
         }
 
-        public int IdPaciente
+        public int DniPaciente
         {
-            get { return idPaciente; }
-            set { idPaciente = value; }
+            get { return dniPaciente; }
+            set { dniPaciente = value; }
         }
     }
 }

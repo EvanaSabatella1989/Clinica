@@ -1,6 +1,6 @@
 ﻿namespace Clinica_SePrice
 {
-    partial class RegistrarPaciente
+    partial class frmRegistrarPaciente
     {
         /// <summary>
         /// Required designer variable.
@@ -63,6 +63,7 @@
             btnVolverRegistrarPaciente.TabIndex = 2;
             btnVolverRegistrarPaciente.Text = "Volver";
             btnVolverRegistrarPaciente.UseVisualStyleBackColor = true;
+            btnVolverRegistrarPaciente.Click += btnVolverRegistrarPaciente_Click;
             // 
             // btnGuardarPaciente
             // 
@@ -135,7 +136,7 @@
             lblRegistroPaciente.TabIndex = 10;
             lblRegistroPaciente.Text = "Registro de nuevo paciente";
             // 
-            // RegistrarPaciente
+            // frmRegistrarPaciente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -151,7 +152,7 @@
             Controls.Add(btnVolverRegistrarPaciente);
             Controls.Add(txtApellidoPaciente);
             Controls.Add(txtNombrePaciente);
-            Name = "RegistrarPaciente";
+            Name = "frmRegistrarPaciente";
             Text = "RegistrarPaciente";
             ResumeLayout(false);
             PerformLayout();
