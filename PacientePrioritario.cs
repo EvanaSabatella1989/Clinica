@@ -50,12 +50,12 @@ namespace Clinica_SePrice
             int index = -1;
             foreach (DataGridViewRow row in dgv.Rows)
             {
-                if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == "Prioritario")
+                if (row.Cells["colHorario" + tipoEstudio].Value != null && row.Cells["colHorario" + tipoEstudio].Value.ToString() == "Prioritario")
                 {
                     index = row.Index + 1;
                     break;
                 }
-                else if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() != "Prioritario")
+                else if (row.Cells["colHorario" + tipoEstudio].Value != null && row.Cells["colHorario" + tipoEstudio].Value.ToString() != "Prioritario")
                 {
                     index = row.Index;
                     break;
@@ -64,11 +64,11 @@ namespace Clinica_SePrice
 
             if (index == -1)
             {
-                dgv.Rows.Insert(0, "Prioritario", dni);
+                dgv.Rows.Insert(0, null, "Prioritario", dni, null, null, null);
             }
             else
             {
-                dgv.Rows.Insert(index, "Prioritario", dni);
+                dgv.Rows.Insert(index, null, "Prioritario", dni, null, null, null);
             }
 
             string mensaje = $"Paciente prioritario agregado correctamente.\n\nDNI: {dni}\nTipo de estudio: {tipoEstudio}";
@@ -78,6 +78,7 @@ namespace Clinica_SePrice
 
             this.Close();
         }
+
 
         private void LimpiarCampos()
         {

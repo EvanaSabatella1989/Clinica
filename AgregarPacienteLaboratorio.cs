@@ -24,7 +24,7 @@ namespace Clinica_SePrice
             _ultimoHorarioAgregado = ultimoHorarioAgregado;
 
             DateTime turnoLimite = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 16, 45, 0);
-            if (_frmListaEspera.ExisteTurnoPosterior(turnoLimite))
+            if (_frmListaEspera.ExisteTurnoExacto(turnoLimite))
             {
                 chkAyuno.Visible = false;
                 cbHorarios.Visible = false;
@@ -34,7 +34,6 @@ namespace Clinica_SePrice
                 ConfigurarComboBoxHorarios();
             }
         }
-
         private void ConfigurarComboBoxHorarios()
         {
             cbHorarios.Items.Clear();
@@ -57,13 +56,11 @@ namespace Clinica_SePrice
                 horaFin = DateTime.Today.AddHours(16).AddMinutes(45);
             }
 
-            if (_frmListaEspera.ExisteTurnoPosterior(new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 16, 45, 0)))
+            if (_frmListaEspera.ExisteTurnoExacto(new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 16, 45, 0)))
             {
-                if (chkAyuno.Checked)
-                {
-                    cbHorarios.Visible = false;
-                    return;
-                }
+                chkAyuno.Visible = false;
+                cbHorarios.Visible = false;
+                return;
             }
 
             while (horaBase <= horaFin)
@@ -80,12 +77,18 @@ namespace Clinica_SePrice
             }
 
             cbHorarios.Visible = true;
+
+            if (chkAyuno.Checked && _frmListaEspera.ExisteTurnoExacto(new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 10, 45, 0)))
+            {
+                cbHorarios.Visible = false;
+            }
         }
 
         private void chkAyuno_CheckedChanged(object sender, EventArgs e)
         {
             ConfigurarComboBoxHorarios();
         }
+
 
         private void chkPrioritario_CheckedChanged(object sender, EventArgs e)
         {
@@ -105,7 +108,7 @@ namespace Clinica_SePrice
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             DateTime turnoLimite = new DateTime(DateTime.Today.Year, DateTime.Today.Month, DateTime.Today.Day, 16, 45, 0);
-            if (_frmListaEspera.ExisteTurnoPosterior(turnoLimite))
+            if (_frmListaEspera.ExisteTurnoExacto(turnoLimite))
             {
                 if (!chkPrioritario.Checked)
                 {
@@ -144,7 +147,7 @@ namespace Clinica_SePrice
                 int index = -1;
                 foreach (DataGridViewRow row in dgvLaboratorio.Rows)
                 {
-                    if (row.Cells[0].Value != null && row.Cells[0].Value.ToString() == "Prioritario")
+                    if (row.Cells["colHorarioLaboratorio"].Value != null && row.Cells["colHorarioLaboratorio"].Value.ToString() == "Prioritario")
                     {
                         index = row.Index + 1;
                         break;
@@ -156,7 +159,7 @@ namespace Clinica_SePrice
                     index = 0;
                 }
 
-                dgvLaboratorio.Rows.Insert(index, "Prioritario", dni);
+                dgvLaboratorio.Rows.Insert(index, null, "Prioritario", dni, null, null, null);
             }
             else
             {
@@ -175,7 +178,7 @@ namespace Clinica_SePrice
                     _ultimoHorarioAgregado = DateTime.Today.AddHours(16).AddMinutes(45);
                 }
 
-                dgvLaboratorio.Rows.Add(horario, dni);
+                dgvLaboratorio.Rows.Add(null, horario, dni, null, null, null);
             }
 
             _frmListaEspera.UltimoHorarioAgregadoLaboratorio = _ultimoHorarioAgregado;
@@ -186,6 +189,7 @@ namespace Clinica_SePrice
 
             this.Close();
         }
+
 
         private bool EsNumeroValido(string dni)
         {

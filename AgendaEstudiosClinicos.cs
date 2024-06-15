@@ -14,7 +14,6 @@ namespace Clinica_SePrice
             InitializeComponent();
             this.gestionarInsumosForm = gestionarInsumosForm;
             EliminarFilaEnBlanco();
-            dgvRadiografia.CellContentClick += dgvRadiografia_CellContentClick;
 
             foreach (TabPage tabPage in tbEstudios.TabPages)
             {
@@ -22,7 +21,14 @@ namespace Clinica_SePrice
                 {
                     if (control is DataGridView dgv)
                     {
-                        dgv.UserDeletingRow += dgv_EliminarFila;
+                        dgv.CellContentClick += dgv_CellContentClick;
+                        foreach (DataGridViewColumn columna in dgv.Columns)
+                        {
+                            if (columna.Name.StartsWith("colAcciones"))
+                            {
+                                columna.ReadOnly = true;
+                            }
+                        }
                     }
                 }
             }
@@ -64,7 +70,7 @@ namespace Clinica_SePrice
             DataGridView dgv = ObtenerDataGridViewPorTipoEstudio(tipoEstudio);
             if (dgv != null)
             {
-                dgv.Rows.Add("Prioritario", dni);
+                dgv.Rows.Add(null, "Prioritario", dni, null, null, null);
             }
             else
             {
@@ -191,29 +197,81 @@ namespace Clinica_SePrice
             }
         }
 
-        private void dgvRadiografia_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public bool ExisteTurnoExacto(DateTime horario)
         {
-            if (e.RowIndex >= 0 && e.ColumnIndex == dgvRadiografia.Columns["colAccionesRadiografia"].Index)
+            foreach (DataGridViewRow row in dgvLaboratorio.Rows)
             {
-                string idInsumo = "00003"; 
-
-                using (frmAcreditarPaciente frmAcreditar = new frmAcreditarPaciente(gestionarInsumosForm, idInsumo))
+                if (row.Cells["colHorarioLaboratorio"].Value != null)
                 {
-                    DialogResult result = frmAcreditar.ShowDialog();
+                    string horarioString = row.Cells["colHorarioLaboratorio"].Value.ToString();
 
-                    if (result == DialogResult.OK)
+                    if (horarioString.Equals("Prioritario", StringComparison.OrdinalIgnoreCase))
                     {
-                        string opcionSeleccionada = frmAcreditar.ObtenerOpcionSeleccionada();
+                        continue;
+                    }
 
-                        if (!string.IsNullOrEmpty(opcionSeleccionada))
+                    DateTime horarioRow;
+                    if (DateTime.TryParseExact(horarioString, "HH:mm", null, System.Globalization.DateTimeStyles.None, out horarioRow))
+                    {
+                        if (horarioRow == horario)
                         {
-                            dgvRadiografia.Rows[e.RowIndex].Cells["colAccionesRadiografia"].Value = $"Acreditado ({opcionSeleccionada})";
-                            dgvRadiografia.Rows[e.RowIndex].Cells["colAccionesRadiografia"].ReadOnly = true;
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        }
+
+        private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dgv = sender as DataGridView;
+
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewColumn columna = dgv.Columns[e.ColumnIndex];
+
+                if (columna.Name.StartsWith("colAcciones"))
+                {
+                    string tipoEstudio = ObtenerTipoEstudioPorDataGridView(dgv);
+
+                    using (frmAcreditarPaciente frmAcreditar = new frmAcreditarPaciente(gestionarInsumosForm))
+                    {
+                        frmAcreditar.StartPosition = FormStartPosition.CenterScreen;
+                        DialogResult result = frmAcreditar.ShowDialog();
+
+                        if (result == DialogResult.OK)
+                        {
+                            string opcionSeleccionada = frmAcreditar.ObtenerOpcionSeleccionada();
+
+                            if (!string.IsNullOrEmpty(opcionSeleccionada))
+                            {
+                                dgv.Rows[e.RowIndex].Cells[columna.Name].Value = $"Acreditado ({opcionSeleccionada})";
+                                dgv.Rows[e.RowIndex].Cells[columna.Name].ReadOnly = true;
+                            }
                         }
                     }
                 }
             }
         }
+
+        private string ObtenerTipoEstudioPorDataGridView(DataGridView dgv)
+        {
+            switch (dgv.Name)
+            {
+                case "dgvLaboratorio":
+                    return "Laboratorio";
+                case "dgvEcografia":
+                    return "Ecografía";
+                case "dgvElectrocardiograma":
+                    return "Electrocardiograma";
+                case "dgvRadiografia":
+                    return "Radiografía";
+                case "dgvTomografia":
+                    return "Tomografía";
+                default:
+                    return string.Empty;
+            }
+        }
     }
 }
-

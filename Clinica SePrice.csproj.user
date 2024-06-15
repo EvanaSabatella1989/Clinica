@@ -7,6 +7,9 @@
     <Compile Update="Agenda.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="AgendaEstudiosClinicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AgendarTurnoEstudios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -29,9 +32,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="GestionarInsumos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="AgendaEstudiosClinicos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Login.cs">
