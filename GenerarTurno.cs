@@ -15,6 +15,7 @@ namespace Clinica_SePrice
         {
             InitializeComponent();
             InitializeDateTimePicker();
+            InitializeComboBoxes();
             dateTimePicker.ValueChanged += new EventHandler(dateTimePicker_ValueChanged);
         }
 
@@ -23,6 +24,21 @@ namespace Clinica_SePrice
             dateTimePicker.MinDate = DateTime.Today;
             dateTimePicker.MaxDate = DateTime.Today.AddMonths(6);
             dateTimePicker.Value = DateTime.Today;
+        }
+
+        private void InitializeComboBoxes()
+        {
+            comboBoxEspecialidad.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxMedico.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            comboBoxEspecialidad.Items.AddRange(new string[] { "Cardiología", "Dermatología", "Pediatría", "Neurología" });
+            comboBoxMedico.Items.AddRange(new string[] { "Dr. Pérez", "Dr. López", "Dra. García", "Dr. Fernández" });
+
+            if (comboBoxEspecialidad.Items.Count > 0)
+                comboBoxEspecialidad.SelectedIndex = 0;
+
+            if (comboBoxMedico.Items.Count > 0)
+                comboBoxMedico.SelectedIndex = 0;
         }
 
         private void dateTimePicker_ValueChanged(object sender, EventArgs e)
@@ -43,7 +59,7 @@ namespace Clinica_SePrice
 
             for (TimeSpan time = startTime; time < endTime; time += interval)
             {
-                listBox.Items.Add(selectedDate.Add(time).ToString(@"hh\:mm"));
+                listBox.Items.Add(time.ToString(@"hh\:mm"));
             }
         }
 
@@ -101,19 +117,47 @@ namespace Clinica_SePrice
 
         private void btnConfirmaTurno_Click(object sender, EventArgs e)
         {
-            if (listBox.SelectedItem == null)
+            string dni = textBoxDni.Text.Trim();
+
+            if (string.IsNullOrEmpty(dni))
             {
-                MessageBox.Show("Por favor, seleccione una hora para el turno.");
+                MessageBox.Show("Por favor, ingrese un DNI.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            string especialidad = comboBoxEspecialidad.Text;
-            string medico = comboBoxMedico.Text;
+            if (!DniExisteEnBaseDeDatos(dni))
+            {
+                MessageBox.Show("El DNI ingresado no está registrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (listBox.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, seleccione una hora para el turno.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (comboBoxEspecialidad.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, seleccione una especialidad.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (comboBoxMedico.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, seleccione un médico.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string especialidad = comboBoxEspecialidad.SelectedItem.ToString();
+            string medico = comboBoxMedico.SelectedItem.ToString();
             DateTime selectedDate = dateTimePicker.Value.Date;
             string selectedTime = listBox.SelectedItem.ToString();
             DateTime selectedDateTime = DateTime.Parse(selectedDate.ToShortDateString() + " " + selectedTime);
 
-            int idPaciente = ObtenerIdPacientePorDni(textBoxDni.Text.Trim());
+            int idPaciente = ObtenerIdPacientePorDni(dni);
+
+            MessageBox.Show("Turno reservado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private int ObtenerIdPacientePorDni(string dni)

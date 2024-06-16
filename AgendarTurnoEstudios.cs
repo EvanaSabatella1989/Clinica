@@ -1,20 +1,26 @@
-﻿namespace Clinica_SePrice
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+using Clinica_SePrice.Datos;
+
+namespace Clinica_SePrice
 {
     public partial class frmAgendarTurnoEstudios : Form
     {
+        private readonly Conexion conexion = Conexion.getInstancia();
+
         public frmAgendarTurnoEstudios()
         {
             InitializeComponent();
             dtpFecha.MinDate = DateTime.Today;
             dtpFecha.MaxDate = DateTime.Today.AddMonths(6);
 
-
             dtpFecha.ValueChanged += new EventHandler(dtpFecha_ValueChanged);
             dtpFecha_ValueChanged(this, EventArgs.Empty);
 
             cbHorario.DropDownStyle = ComboBoxStyle.DropDownList;
-
-
+            cbTipoEstudio.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -83,6 +89,26 @@
 
         private void btnSolicitar_Click(object sender, EventArgs e)
         {
+            string dni = txtDni.Text.Trim();
+
+            if (string.IsNullOrEmpty(dni))
+            {
+                MessageBox.Show("Por favor, ingrese un DNI.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!DniExisteEnBaseDeDatos(dni))
+            {
+                MessageBox.Show("El DNI ingresado no está registrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (cbTipoEstudio.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, seleccione un tipo de estudio.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             DayOfWeek dia = dtpFecha.Value.DayOfWeek;
 
             if (dia == DayOfWeek.Sunday)
@@ -93,6 +119,32 @@
             {
                 MessageBox.Show("Solicitud de estudio clínico realizada correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private bool DniExisteEnBaseDeDatos(string dni)
+        {
+            bool existe = false;
+
+            try
+            {
+                using (MySqlConnection conn = conexion.CrearConexion())
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM persona WHERE dni = @dni";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@dni", dni);
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        existe = count > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al verificar el DNI en la base de datos: " + ex.Message);
+            }
+
+            return existe;
         }
     }
 }

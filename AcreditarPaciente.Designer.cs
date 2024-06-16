@@ -79,9 +79,9 @@
             // 
             // btnAcreditar
             // 
-            btnAcreditar.Location = new Point(73, 154);
+            btnAcreditar.Location = new Point(67, 145);
             btnAcreditar.Name = "btnAcreditar";
-            btnAcreditar.Size = new Size(75, 23);
+            btnAcreditar.Size = new Size(91, 37);
             btnAcreditar.TabIndex = 4;
             btnAcreditar.Text = "Acreditar";
             btnAcreditar.UseVisualStyleBackColor = true;
@@ -96,7 +96,7 @@
             Controls.Add(gbModalidadPago);
             Controls.Add(lblModalidadDePago);
             Name = "frmAcreditarPaciente";
-            Text = "AcreditarPaciente";
+            Text = "Acreditar";
             gbModalidadPago.ResumeLayout(false);
             gbModalidadPago.PerformLayout();
             ResumeLayout(false);

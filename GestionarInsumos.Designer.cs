@@ -103,7 +103,7 @@
             Controls.Add(btnAgregarInsumo);
             Controls.Add(dgvInsumos);
             Name = "frmGestionarInsumos";
-            Text = "GestionarInsumos";
+            Text = "Gestionar Insumos";
             ((System.ComponentModel.ISupportInitialize)dgvInsumos).EndInit();
             ResumeLayout(false);
         }

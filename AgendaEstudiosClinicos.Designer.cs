@@ -33,43 +33,6 @@
             btnVolverMenu = new Button();
             tabTomografia = new TabPage();
             dgvTomografia = new DataGridView();
-            tabRadiografia = new TabPage();
-            dgvRadiografia = new DataGridView();
-            tabElectrocardiograma = new TabPage();
-            dgvElectrocardiograma = new DataGridView();
-            tabEcografia = new TabPage();
-            dgvEcografia = new DataGridView();
-            colAccionesEcografia = new DataGridViewButtonColumn();
-            colFechaEcografia = new DataGridViewTextBoxColumn();
-            colApellidoEcografia = new DataGridViewTextBoxColumn();
-            colNombreEcografia = new DataGridViewTextBoxColumn();
-            colDniEcografia = new DataGridViewTextBoxColumn();
-            colHorarioEcografia = new DataGridViewTextBoxColumn();
-            colIdEcografia = new DataGridViewTextBoxColumn();
-            tabLaboratorio = new TabPage();
-            dgvLaboratorio = new DataGridView();
-            colAccionesLaboratorio = new DataGridViewButtonColumn();
-            colApellidoLaboratorio = new DataGridViewTextBoxColumn();
-            colNombreLaboratorio = new DataGridViewTextBoxColumn();
-            colDniLaboratorio = new DataGridViewTextBoxColumn();
-            colHorarioLaboratorio = new DataGridViewTextBoxColumn();
-            colIdLaboratorio = new DataGridViewTextBoxColumn();
-            btnAgregarPacienteLaboratorio = new Button();
-            tbEstudios = new TabControl();
-            colIdElectrocardiograma = new DataGridViewTextBoxColumn();
-            colHorarioElectrocardiograma = new DataGridViewTextBoxColumn();
-            colDniElectrocardiograma = new DataGridViewTextBoxColumn();
-            colNombreElectrocardiograma = new DataGridViewTextBoxColumn();
-            colApellidoElectrocardiograma = new DataGridViewTextBoxColumn();
-            colFechaElectrocardiograma = new DataGridViewTextBoxColumn();
-            colAccionesElectrocardiograma = new DataGridViewButtonColumn();
-            colIdRadiografia = new DataGridViewTextBoxColumn();
-            colHorarioRadiografia = new DataGridViewTextBoxColumn();
-            colDniRadiografia = new DataGridViewTextBoxColumn();
-            colNombreRadiografia = new DataGridViewTextBoxColumn();
-            colApellidoRadiografia = new DataGridViewTextBoxColumn();
-            colFechaRadiografia = new DataGridViewTextBoxColumn();
-            colAccionesRadiografia = new DataGridViewButtonColumn();
             colIdTomografia = new DataGridViewTextBoxColumn();
             colHorarioTomografia = new DataGridViewTextBoxColumn();
             colDniTomografia = new DataGridViewTextBoxColumn();
@@ -77,6 +40,43 @@
             colApellidoTomografia = new DataGridViewTextBoxColumn();
             colFechaTomografia = new DataGridViewTextBoxColumn();
             colAcreditarTomografia = new DataGridViewButtonColumn();
+            tabRadiografia = new TabPage();
+            dgvRadiografia = new DataGridView();
+            colIdRadiografia = new DataGridViewTextBoxColumn();
+            colHorarioRadiografia = new DataGridViewTextBoxColumn();
+            colDniRadiografia = new DataGridViewTextBoxColumn();
+            colNombreRadiografia = new DataGridViewTextBoxColumn();
+            colApellidoRadiografia = new DataGridViewTextBoxColumn();
+            colFechaRadiografia = new DataGridViewTextBoxColumn();
+            colAccionesRadiografia = new DataGridViewButtonColumn();
+            tabElectrocardiograma = new TabPage();
+            dgvElectrocardiograma = new DataGridView();
+            colIdElectrocardiograma = new DataGridViewTextBoxColumn();
+            colHorarioElectrocardiograma = new DataGridViewTextBoxColumn();
+            colDniElectrocardiograma = new DataGridViewTextBoxColumn();
+            colNombreElectrocardiograma = new DataGridViewTextBoxColumn();
+            colApellidoElectrocardiograma = new DataGridViewTextBoxColumn();
+            colFechaElectrocardiograma = new DataGridViewTextBoxColumn();
+            colAccionesElectrocardiograma = new DataGridViewButtonColumn();
+            tabEcografia = new TabPage();
+            dgvEcografia = new DataGridView();
+            colIdEcografia = new DataGridViewTextBoxColumn();
+            colHorarioEcografia = new DataGridViewTextBoxColumn();
+            colDniEcografia = new DataGridViewTextBoxColumn();
+            colNombreEcografia = new DataGridViewTextBoxColumn();
+            colApellidoEcografia = new DataGridViewTextBoxColumn();
+            colFechaEcografia = new DataGridViewTextBoxColumn();
+            colAccionesEcografia = new DataGridViewButtonColumn();
+            tabLaboratorio = new TabPage();
+            btnAgregarPacienteLaboratorio = new Button();
+            dgvLaboratorio = new DataGridView();
+            colIdLaboratorio = new DataGridViewTextBoxColumn();
+            colHorarioLaboratorio = new DataGridViewTextBoxColumn();
+            colDniLaboratorio = new DataGridViewTextBoxColumn();
+            colNombreLaboratorio = new DataGridViewTextBoxColumn();
+            colApellidoLaboratorio = new DataGridViewTextBoxColumn();
+            colAccionesLaboratorio = new DataGridViewButtonColumn();
+            tbEstudios = new TabControl();
             tabTomografia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTomografia).BeginInit();
             tabRadiografia.SuspendLayout();
@@ -139,6 +139,49 @@
             dgvTomografia.Size = new Size(865, 255);
             dgvTomografia.TabIndex = 0;
             // 
+            // colIdTomografia
+            // 
+            colIdTomografia.HeaderText = "Id";
+            colIdTomografia.Name = "colIdTomografia";
+            colIdTomografia.Width = 70;
+            // 
+            // colHorarioTomografia
+            // 
+            colHorarioTomografia.HeaderText = "Horario";
+            colHorarioTomografia.Name = "colHorarioTomografia";
+            colHorarioTomografia.Width = 70;
+            // 
+            // colDniTomografia
+            // 
+            colDniTomografia.HeaderText = "DNI";
+            colDniTomografia.Name = "colDniTomografia";
+            colDniTomografia.Width = 80;
+            // 
+            // colNombreTomografia
+            // 
+            colNombreTomografia.HeaderText = "Nombre";
+            colNombreTomografia.Name = "colNombreTomografia";
+            colNombreTomografia.Width = 180;
+            // 
+            // colApellidoTomografia
+            // 
+            colApellidoTomografia.HeaderText = "Apellido";
+            colApellidoTomografia.Name = "colApellidoTomografia";
+            colApellidoTomografia.Width = 180;
+            // 
+            // colFechaTomografia
+            // 
+            colFechaTomografia.HeaderText = "Fecha";
+            colFechaTomografia.Name = "colFechaTomografia";
+            // 
+            // colAcreditarTomografia
+            // 
+            colAcreditarTomografia.HeaderText = "Acciones";
+            colAcreditarTomografia.Name = "colAcreditarTomografia";
+            colAcreditarTomografia.Resizable = DataGridViewTriState.True;
+            colAcreditarTomografia.SortMode = DataGridViewColumnSortMode.Automatic;
+            colAcreditarTomografia.Width = 150;
+            // 
             // tabRadiografia
             // 
             tabRadiografia.Controls.Add(dgvRadiografia);
@@ -158,213 +201,6 @@
             dgvRadiografia.Name = "dgvRadiografia";
             dgvRadiografia.Size = new Size(865, 255);
             dgvRadiografia.TabIndex = 0;
-            // 
-            // tabElectrocardiograma
-            // 
-            tabElectrocardiograma.Controls.Add(dgvElectrocardiograma);
-            tabElectrocardiograma.Location = new Point(4, 24);
-            tabElectrocardiograma.Name = "tabElectrocardiograma";
-            tabElectrocardiograma.Padding = new Padding(3);
-            tabElectrocardiograma.Size = new Size(874, 264);
-            tabElectrocardiograma.TabIndex = 2;
-            tabElectrocardiograma.Text = "Electrocardiograma";
-            tabElectrocardiograma.UseVisualStyleBackColor = true;
-            // 
-            // dgvElectrocardiograma
-            // 
-            dgvElectrocardiograma.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvElectrocardiograma.Columns.AddRange(new DataGridViewColumn[] { colIdElectrocardiograma, colHorarioElectrocardiograma, colDniElectrocardiograma, colNombreElectrocardiograma, colApellidoElectrocardiograma, colFechaElectrocardiograma, colAccionesElectrocardiograma });
-            dgvElectrocardiograma.Location = new Point(6, 6);
-            dgvElectrocardiograma.Name = "dgvElectrocardiograma";
-            dgvElectrocardiograma.Size = new Size(865, 255);
-            dgvElectrocardiograma.TabIndex = 0;
-            // 
-            // tabEcografia
-            // 
-            tabEcografia.Controls.Add(dgvEcografia);
-            tabEcografia.Location = new Point(4, 24);
-            tabEcografia.Name = "tabEcografia";
-            tabEcografia.Padding = new Padding(3);
-            tabEcografia.Size = new Size(874, 264);
-            tabEcografia.TabIndex = 1;
-            tabEcografia.Text = "Ecografía";
-            tabEcografia.UseVisualStyleBackColor = true;
-            // 
-            // dgvEcografia
-            // 
-            dgvEcografia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvEcografia.Columns.AddRange(new DataGridViewColumn[] { colIdEcografia, colHorarioEcografia, colDniEcografia, colNombreEcografia, colApellidoEcografia, colFechaEcografia, colAccionesEcografia });
-            dgvEcografia.Location = new Point(6, 6);
-            dgvEcografia.Name = "dgvEcografia";
-            dgvEcografia.Size = new Size(865, 255);
-            dgvEcografia.TabIndex = 0;
-            // 
-            // colAccionesEcografia
-            // 
-            colAccionesEcografia.HeaderText = "Acciones";
-            colAccionesEcografia.Name = "colAccionesEcografia";
-            colAccionesEcografia.Resizable = DataGridViewTriState.True;
-            colAccionesEcografia.SortMode = DataGridViewColumnSortMode.Automatic;
-            colAccionesEcografia.Width = 150;
-            // 
-            // colFechaEcografia
-            // 
-            colFechaEcografia.HeaderText = "Fecha";
-            colFechaEcografia.Name = "colFechaEcografia";
-            // 
-            // colApellidoEcografia
-            // 
-            colApellidoEcografia.HeaderText = "Apellido";
-            colApellidoEcografia.Name = "colApellidoEcografia";
-            colApellidoEcografia.Width = 180;
-            // 
-            // colNombreEcografia
-            // 
-            colNombreEcografia.HeaderText = "Nombre";
-            colNombreEcografia.Name = "colNombreEcografia";
-            colNombreEcografia.Width = 180;
-            // 
-            // colDniEcografia
-            // 
-            colDniEcografia.HeaderText = "DNI";
-            colDniEcografia.Name = "colDniEcografia";
-            colDniEcografia.Width = 80;
-            // 
-            // colHorarioEcografia
-            // 
-            colHorarioEcografia.HeaderText = "Horario";
-            colHorarioEcografia.Name = "colHorarioEcografia";
-            colHorarioEcografia.Width = 70;
-            // 
-            // colIdEcografia
-            // 
-            colIdEcografia.HeaderText = "Id";
-            colIdEcografia.Name = "colIdEcografia";
-            colIdEcografia.Width = 70;
-            // 
-            // tabLaboratorio
-            // 
-            tabLaboratorio.Controls.Add(btnAgregarPacienteLaboratorio);
-            tabLaboratorio.Controls.Add(dgvLaboratorio);
-            tabLaboratorio.Location = new Point(4, 24);
-            tabLaboratorio.Name = "tabLaboratorio";
-            tabLaboratorio.Padding = new Padding(3);
-            tabLaboratorio.Size = new Size(874, 264);
-            tabLaboratorio.TabIndex = 0;
-            tabLaboratorio.Tag = "";
-            tabLaboratorio.Text = "Laboratorio";
-            tabLaboratorio.UseVisualStyleBackColor = true;
-            // 
-            // dgvLaboratorio
-            // 
-            dgvLaboratorio.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLaboratorio.Columns.AddRange(new DataGridViewColumn[] { colIdLaboratorio, colHorarioLaboratorio, colDniLaboratorio, colNombreLaboratorio, colApellidoLaboratorio, colAccionesLaboratorio });
-            dgvLaboratorio.Location = new Point(6, 34);
-            dgvLaboratorio.Name = "dgvLaboratorio";
-            dgvLaboratorio.Size = new Size(865, 227);
-            dgvLaboratorio.TabIndex = 0;
-            // 
-            // colAccionesLaboratorio
-            // 
-            colAccionesLaboratorio.HeaderText = "Acciones";
-            colAccionesLaboratorio.Name = "colAccionesLaboratorio";
-            colAccionesLaboratorio.Resizable = DataGridViewTriState.True;
-            colAccionesLaboratorio.SortMode = DataGridViewColumnSortMode.Automatic;
-            colAccionesLaboratorio.Width = 150;
-            // 
-            // colApellidoLaboratorio
-            // 
-            colApellidoLaboratorio.HeaderText = "Apellido";
-            colApellidoLaboratorio.Name = "colApellidoLaboratorio";
-            colApellidoLaboratorio.Width = 200;
-            // 
-            // colNombreLaboratorio
-            // 
-            colNombreLaboratorio.HeaderText = "Nombre";
-            colNombreLaboratorio.Name = "colNombreLaboratorio";
-            colNombreLaboratorio.Width = 200;
-            // 
-            // colDniLaboratorio
-            // 
-            colDniLaboratorio.HeaderText = "DNI";
-            colDniLaboratorio.Name = "colDniLaboratorio";
-            // 
-            // colHorarioLaboratorio
-            // 
-            colHorarioLaboratorio.HeaderText = "Horario";
-            colHorarioLaboratorio.Name = "colHorarioLaboratorio";
-            // 
-            // colIdLaboratorio
-            // 
-            colIdLaboratorio.HeaderText = "Id";
-            colIdLaboratorio.Name = "colIdLaboratorio";
-            colIdLaboratorio.Width = 70;
-            // 
-            // btnAgregarPacienteLaboratorio
-            // 
-            btnAgregarPacienteLaboratorio.Location = new Point(6, 6);
-            btnAgregarPacienteLaboratorio.Name = "btnAgregarPacienteLaboratorio";
-            btnAgregarPacienteLaboratorio.Size = new Size(226, 23);
-            btnAgregarPacienteLaboratorio.TabIndex = 1;
-            btnAgregarPacienteLaboratorio.Text = "Agregar paciente a la lista de espera";
-            btnAgregarPacienteLaboratorio.UseVisualStyleBackColor = true;
-            btnAgregarPacienteLaboratorio.Click += btnAgregarPacienteLaboratorio_Click;
-            // 
-            // tbEstudios
-            // 
-            tbEstudios.Controls.Add(tabLaboratorio);
-            tbEstudios.Controls.Add(tabEcografia);
-            tbEstudios.Controls.Add(tabElectrocardiograma);
-            tbEstudios.Controls.Add(tabRadiografia);
-            tbEstudios.Controls.Add(tabTomografia);
-            tbEstudios.Location = new Point(12, 61);
-            tbEstudios.Name = "tbEstudios";
-            tbEstudios.SelectedIndex = 0;
-            tbEstudios.Size = new Size(882, 292);
-            tbEstudios.TabIndex = 0;
-            // 
-            // colIdElectrocardiograma
-            // 
-            colIdElectrocardiograma.HeaderText = "Id";
-            colIdElectrocardiograma.Name = "colIdElectrocardiograma";
-            colIdElectrocardiograma.Width = 70;
-            // 
-            // colHorarioElectrocardiograma
-            // 
-            colHorarioElectrocardiograma.HeaderText = "Horario";
-            colHorarioElectrocardiograma.Name = "colHorarioElectrocardiograma";
-            colHorarioElectrocardiograma.Width = 70;
-            // 
-            // colDniElectrocardiograma
-            // 
-            colDniElectrocardiograma.HeaderText = "DNI";
-            colDniElectrocardiograma.Name = "colDniElectrocardiograma";
-            colDniElectrocardiograma.Width = 80;
-            // 
-            // colNombreElectrocardiograma
-            // 
-            colNombreElectrocardiograma.HeaderText = "Nombre";
-            colNombreElectrocardiograma.Name = "colNombreElectrocardiograma";
-            colNombreElectrocardiograma.Width = 180;
-            // 
-            // colApellidoElectrocardiograma
-            // 
-            colApellidoElectrocardiograma.HeaderText = "Apellido";
-            colApellidoElectrocardiograma.Name = "colApellidoElectrocardiograma";
-            colApellidoElectrocardiograma.Width = 180;
-            // 
-            // colFechaElectrocardiograma
-            // 
-            colFechaElectrocardiograma.HeaderText = "Fecha";
-            colFechaElectrocardiograma.Name = "colFechaElectrocardiograma";
-            // 
-            // colAccionesElectrocardiograma
-            // 
-            colAccionesElectrocardiograma.HeaderText = "Acciones";
-            colAccionesElectrocardiograma.Name = "colAccionesElectrocardiograma";
-            colAccionesElectrocardiograma.Resizable = DataGridViewTriState.True;
-            colAccionesElectrocardiograma.SortMode = DataGridViewColumnSortMode.Automatic;
-            colAccionesElectrocardiograma.Width = 150;
             // 
             // colIdRadiografia
             // 
@@ -409,54 +245,218 @@
             colAccionesRadiografia.SortMode = DataGridViewColumnSortMode.Automatic;
             colAccionesRadiografia.Width = 150;
             // 
-            // colIdTomografia
+            // tabElectrocardiograma
             // 
-            colIdTomografia.HeaderText = "Id";
-            colIdTomografia.Name = "colIdTomografia";
-            colIdTomografia.Width = 70;
+            tabElectrocardiograma.Controls.Add(dgvElectrocardiograma);
+            tabElectrocardiograma.Location = new Point(4, 24);
+            tabElectrocardiograma.Name = "tabElectrocardiograma";
+            tabElectrocardiograma.Padding = new Padding(3);
+            tabElectrocardiograma.Size = new Size(874, 264);
+            tabElectrocardiograma.TabIndex = 2;
+            tabElectrocardiograma.Text = "Electrocardiograma";
+            tabElectrocardiograma.UseVisualStyleBackColor = true;
             // 
-            // colHorarioTomografia
+            // dgvElectrocardiograma
             // 
-            colHorarioTomografia.HeaderText = "Horario";
-            colHorarioTomografia.Name = "colHorarioTomografia";
-            colHorarioTomografia.Width = 70;
+            dgvElectrocardiograma.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvElectrocardiograma.Columns.AddRange(new DataGridViewColumn[] { colIdElectrocardiograma, colHorarioElectrocardiograma, colDniElectrocardiograma, colNombreElectrocardiograma, colApellidoElectrocardiograma, colFechaElectrocardiograma, colAccionesElectrocardiograma });
+            dgvElectrocardiograma.Location = new Point(6, 6);
+            dgvElectrocardiograma.Name = "dgvElectrocardiograma";
+            dgvElectrocardiograma.Size = new Size(865, 255);
+            dgvElectrocardiograma.TabIndex = 0;
             // 
-            // colDniTomografia
+            // colIdElectrocardiograma
             // 
-            colDniTomografia.HeaderText = "DNI";
-            colDniTomografia.Name = "colDniTomografia";
-            colDniTomografia.Width = 80;
+            colIdElectrocardiograma.HeaderText = "Id";
+            colIdElectrocardiograma.Name = "colIdElectrocardiograma";
+            colIdElectrocardiograma.Width = 70;
             // 
-            // colNombreTomografia
+            // colHorarioElectrocardiograma
             // 
-            colNombreTomografia.HeaderText = "Nombre";
-            colNombreTomografia.Name = "colNombreTomografia";
-            colNombreTomografia.Width = 180;
+            colHorarioElectrocardiograma.HeaderText = "Horario";
+            colHorarioElectrocardiograma.Name = "colHorarioElectrocardiograma";
+            colHorarioElectrocardiograma.Width = 70;
             // 
-            // colApellidoTomografia
+            // colDniElectrocardiograma
             // 
-            colApellidoTomografia.HeaderText = "Apellido";
-            colApellidoTomografia.Name = "colApellidoTomografia";
-            colApellidoTomografia.Width = 180;
+            colDniElectrocardiograma.HeaderText = "DNI";
+            colDniElectrocardiograma.Name = "colDniElectrocardiograma";
+            colDniElectrocardiograma.Width = 80;
             // 
-            // colFechaTomografia
+            // colNombreElectrocardiograma
             // 
-            colFechaTomografia.HeaderText = "Fecha";
-            colFechaTomografia.Name = "colFechaTomografia";
+            colNombreElectrocardiograma.HeaderText = "Nombre";
+            colNombreElectrocardiograma.Name = "colNombreElectrocardiograma";
+            colNombreElectrocardiograma.Width = 180;
             // 
-            // colAcreditarTomografia
+            // colApellidoElectrocardiograma
             // 
-            colAcreditarTomografia.HeaderText = "Acciones";
-            colAcreditarTomografia.Name = "colAcreditarTomografia";
-            colAcreditarTomografia.Resizable = DataGridViewTriState.True;
-            colAcreditarTomografia.SortMode = DataGridViewColumnSortMode.Automatic;
-            colAcreditarTomografia.Width = 150;
+            colApellidoElectrocardiograma.HeaderText = "Apellido";
+            colApellidoElectrocardiograma.Name = "colApellidoElectrocardiograma";
+            colApellidoElectrocardiograma.Width = 180;
+            // 
+            // colFechaElectrocardiograma
+            // 
+            colFechaElectrocardiograma.HeaderText = "Fecha";
+            colFechaElectrocardiograma.Name = "colFechaElectrocardiograma";
+            // 
+            // colAccionesElectrocardiograma
+            // 
+            colAccionesElectrocardiograma.HeaderText = "Acciones";
+            colAccionesElectrocardiograma.Name = "colAccionesElectrocardiograma";
+            colAccionesElectrocardiograma.Resizable = DataGridViewTriState.True;
+            colAccionesElectrocardiograma.SortMode = DataGridViewColumnSortMode.Automatic;
+            colAccionesElectrocardiograma.Width = 150;
+            // 
+            // tabEcografia
+            // 
+            tabEcografia.Controls.Add(dgvEcografia);
+            tabEcografia.Location = new Point(4, 24);
+            tabEcografia.Name = "tabEcografia";
+            tabEcografia.Padding = new Padding(3);
+            tabEcografia.Size = new Size(874, 264);
+            tabEcografia.TabIndex = 1;
+            tabEcografia.Text = "Ecografía";
+            tabEcografia.UseVisualStyleBackColor = true;
+            // 
+            // dgvEcografia
+            // 
+            dgvEcografia.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvEcografia.Columns.AddRange(new DataGridViewColumn[] { colIdEcografia, colHorarioEcografia, colDniEcografia, colNombreEcografia, colApellidoEcografia, colFechaEcografia, colAccionesEcografia });
+            dgvEcografia.Location = new Point(6, 6);
+            dgvEcografia.Name = "dgvEcografia";
+            dgvEcografia.Size = new Size(865, 255);
+            dgvEcografia.TabIndex = 0;
+            // 
+            // colIdEcografia
+            // 
+            colIdEcografia.HeaderText = "Id";
+            colIdEcografia.Name = "colIdEcografia";
+            colIdEcografia.Width = 70;
+            // 
+            // colHorarioEcografia
+            // 
+            colHorarioEcografia.HeaderText = "Horario";
+            colHorarioEcografia.Name = "colHorarioEcografia";
+            colHorarioEcografia.Width = 70;
+            // 
+            // colDniEcografia
+            // 
+            colDniEcografia.HeaderText = "DNI";
+            colDniEcografia.Name = "colDniEcografia";
+            colDniEcografia.Width = 80;
+            // 
+            // colNombreEcografia
+            // 
+            colNombreEcografia.HeaderText = "Nombre";
+            colNombreEcografia.Name = "colNombreEcografia";
+            colNombreEcografia.Width = 180;
+            // 
+            // colApellidoEcografia
+            // 
+            colApellidoEcografia.HeaderText = "Apellido";
+            colApellidoEcografia.Name = "colApellidoEcografia";
+            colApellidoEcografia.Width = 180;
+            // 
+            // colFechaEcografia
+            // 
+            colFechaEcografia.HeaderText = "Fecha";
+            colFechaEcografia.Name = "colFechaEcografia";
+            // 
+            // colAccionesEcografia
+            // 
+            colAccionesEcografia.HeaderText = "Acciones";
+            colAccionesEcografia.Name = "colAccionesEcografia";
+            colAccionesEcografia.Resizable = DataGridViewTriState.True;
+            colAccionesEcografia.SortMode = DataGridViewColumnSortMode.Automatic;
+            colAccionesEcografia.Width = 150;
+            // 
+            // tabLaboratorio
+            // 
+            tabLaboratorio.Controls.Add(btnAgregarPacienteLaboratorio);
+            tabLaboratorio.Controls.Add(dgvLaboratorio);
+            tabLaboratorio.Location = new Point(4, 24);
+            tabLaboratorio.Name = "tabLaboratorio";
+            tabLaboratorio.Padding = new Padding(3);
+            tabLaboratorio.Size = new Size(874, 264);
+            tabLaboratorio.TabIndex = 0;
+            tabLaboratorio.Tag = "";
+            tabLaboratorio.Text = "Laboratorio";
+            tabLaboratorio.UseVisualStyleBackColor = true;
+            // 
+            // btnAgregarPacienteLaboratorio
+            // 
+            btnAgregarPacienteLaboratorio.Location = new Point(6, 6);
+            btnAgregarPacienteLaboratorio.Name = "btnAgregarPacienteLaboratorio";
+            btnAgregarPacienteLaboratorio.Size = new Size(226, 23);
+            btnAgregarPacienteLaboratorio.TabIndex = 1;
+            btnAgregarPacienteLaboratorio.Text = "Agregar paciente a la lista de espera";
+            btnAgregarPacienteLaboratorio.UseVisualStyleBackColor = true;
+            btnAgregarPacienteLaboratorio.Click += btnAgregarPacienteLaboratorio_Click;
+            // 
+            // dgvLaboratorio
+            // 
+            dgvLaboratorio.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvLaboratorio.Columns.AddRange(new DataGridViewColumn[] { colIdLaboratorio, colHorarioLaboratorio, colDniLaboratorio, colNombreLaboratorio, colApellidoLaboratorio, colAccionesLaboratorio });
+            dgvLaboratorio.Location = new Point(6, 34);
+            dgvLaboratorio.Name = "dgvLaboratorio";
+            dgvLaboratorio.Size = new Size(865, 227);
+            dgvLaboratorio.TabIndex = 0;
+            // 
+            // colIdLaboratorio
+            // 
+            colIdLaboratorio.HeaderText = "Id";
+            colIdLaboratorio.Name = "colIdLaboratorio";
+            colIdLaboratorio.Width = 70;
+            // 
+            // colHorarioLaboratorio
+            // 
+            colHorarioLaboratorio.HeaderText = "Horario";
+            colHorarioLaboratorio.Name = "colHorarioLaboratorio";
+            // 
+            // colDniLaboratorio
+            // 
+            colDniLaboratorio.HeaderText = "DNI";
+            colDniLaboratorio.Name = "colDniLaboratorio";
+            // 
+            // colNombreLaboratorio
+            // 
+            colNombreLaboratorio.HeaderText = "Nombre";
+            colNombreLaboratorio.Name = "colNombreLaboratorio";
+            colNombreLaboratorio.Width = 200;
+            // 
+            // colApellidoLaboratorio
+            // 
+            colApellidoLaboratorio.HeaderText = "Apellido";
+            colApellidoLaboratorio.Name = "colApellidoLaboratorio";
+            colApellidoLaboratorio.Width = 200;
+            // 
+            // colAccionesLaboratorio
+            // 
+            colAccionesLaboratorio.HeaderText = "Acciones";
+            colAccionesLaboratorio.Name = "colAccionesLaboratorio";
+            colAccionesLaboratorio.Resizable = DataGridViewTriState.True;
+            colAccionesLaboratorio.SortMode = DataGridViewColumnSortMode.Automatic;
+            colAccionesLaboratorio.Width = 150;
+            // 
+            // tbEstudios
+            // 
+            tbEstudios.Controls.Add(tabLaboratorio);
+            tbEstudios.Controls.Add(tabEcografia);
+            tbEstudios.Controls.Add(tabElectrocardiograma);
+            tbEstudios.Controls.Add(tabRadiografia);
+            tbEstudios.Controls.Add(tabTomografia);
+            tbEstudios.Location = new Point(12, 61);
+            tbEstudios.Name = "tbEstudios";
+            tbEstudios.SelectedIndex = 0;
+            tbEstudios.Size = new Size(882, 292);
+            tbEstudios.TabIndex = 0;
             // 
             // frmAgendaEstudiosClinicos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(897, 450);
+            ClientSize = new Size(897, 357);
             Controls.Add(btnVolverMenu);
             Controls.Add(btnPacientePrioritario);
             Controls.Add(frmNuevoPaciente);

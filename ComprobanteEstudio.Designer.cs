@@ -57,18 +57,18 @@
             lblIdEstudio.AutoSize = true;
             lblIdEstudio.Location = new Point(30, 65);
             lblIdEstudio.Name = "lblIdEstudio";
-            lblIdEstudio.Size = new Size(38, 15);
+            lblIdEstudio.Size = new Size(59, 15);
             lblIdEstudio.TabIndex = 1;
-            lblIdEstudio.Text = "label1";
+            lblIdEstudio.Text = "Id Estudio";
             // 
             // lblTipoEstudio
             // 
             lblTipoEstudio.AutoSize = true;
             lblTipoEstudio.Location = new Point(30, 30);
             lblTipoEstudio.Name = "lblTipoEstudio";
-            lblTipoEstudio.Size = new Size(38, 15);
+            lblTipoEstudio.Size = new Size(88, 15);
             lblTipoEstudio.TabIndex = 2;
-            lblTipoEstudio.Text = "label2";
+            lblTipoEstudio.Text = "Tipo de Estudio";
             // 
             // lblFecha
             // 
@@ -77,43 +77,43 @@
             lblFecha.Name = "lblFecha";
             lblFecha.Size = new Size(38, 15);
             lblFecha.TabIndex = 3;
-            lblFecha.Text = "label3";
+            lblFecha.Text = "Fecha";
             // 
             // lblDniPaciente
             // 
             lblDniPaciente.AutoSize = true;
             lblDniPaciente.Location = new Point(30, 100);
             lblDniPaciente.Name = "lblDniPaciente";
-            lblDniPaciente.Size = new Size(38, 15);
+            lblDniPaciente.Size = new Size(27, 15);
             lblDniPaciente.TabIndex = 4;
-            lblDniPaciente.Text = "label4";
+            lblDniPaciente.Text = "DNI";
             // 
             // lblNombrePaciente
             // 
             lblNombrePaciente.AutoSize = true;
             lblNombrePaciente.Location = new Point(30, 137);
             lblNombrePaciente.Name = "lblNombrePaciente";
-            lblNombrePaciente.Size = new Size(38, 15);
+            lblNombrePaciente.Size = new Size(51, 15);
             lblNombrePaciente.TabIndex = 5;
-            lblNombrePaciente.Text = "label5";
+            lblNombrePaciente.Text = "Nombre";
             // 
             // lblApellidoPaciente
             // 
             lblApellidoPaciente.AutoSize = true;
             lblApellidoPaciente.Location = new Point(30, 172);
             lblApellidoPaciente.Name = "lblApellidoPaciente";
-            lblApellidoPaciente.Size = new Size(38, 15);
+            lblApellidoPaciente.Size = new Size(51, 15);
             lblApellidoPaciente.TabIndex = 6;
-            lblApellidoPaciente.Text = "label6";
+            lblApellidoPaciente.Text = "Apellido";
             // 
             // lblFechaRetiro
             // 
             lblFechaRetiro.AutoSize = true;
             lblFechaRetiro.Location = new Point(30, 242);
             lblFechaRetiro.Name = "lblFechaRetiro";
-            lblFechaRetiro.Size = new Size(38, 15);
+            lblFechaRetiro.Size = new Size(146, 15);
             lblFechaRetiro.TabIndex = 7;
-            lblFechaRetiro.Text = "label1";
+            lblFechaRetiro.Text = "Fecha de retiro del estudio";
             // 
             // btnImprimir
             // 
@@ -139,7 +139,7 @@
             Controls.Add(lblIdEstudio);
             Controls.Add(pbLogo);
             Name = "frmComprobante";
-            Text = "ComprobanteEstudio";
+            Text = "Comprobante Estudio";
             ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();

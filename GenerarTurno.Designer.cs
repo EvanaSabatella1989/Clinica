@@ -145,7 +145,7 @@
             Controls.Add(lblDni);
             Controls.Add(dateTimePicker);
             Name = "GenerarTurno";
-            Text = "GenerarTurno";
+            Text = "Generar Turno Consultorios Externos";
             ResumeLayout(false);
             PerformLayout();
         }

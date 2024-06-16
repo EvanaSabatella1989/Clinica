@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             btnTurnos = new Button();
             label1 = new Label();
             label2 = new Label();
@@ -35,6 +36,8 @@
             button3 = new Button();
             btnGestionEstudios = new Button();
             btnListaEsperaEstudiosClinicos = new Button();
+            picLogo = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)picLogo).BeginInit();
             SuspendLayout();
             // 
             // btnTurnos
@@ -52,14 +55,14 @@
             label1.AutoSize = true;
             label1.Location = new Point(34, 21);
             label1.Name = "label1";
-            label1.Size = new Size(66, 15);
+            label1.Size = new Size(77, 15);
             label1.TabIndex = 1;
-            label1.Text = "Bienvenido";
+            label1.Text = "Bienvenido/a";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(356, 21);
+            label2.Location = new Point(117, 21);
             label2.Name = "label2";
             label2.Size = new Size(109, 15);
             label2.TabIndex = 2;
@@ -77,7 +80,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(390, 168);
+            button3.Location = new Point(342, 21);
             button3.Name = "button3";
             button3.Size = new Size(75, 23);
             button3.TabIndex = 4;
@@ -104,11 +107,22 @@
             btnListaEsperaEstudiosClinicos.UseVisualStyleBackColor = true;
             btnListaEsperaEstudiosClinicos.Click += btnListaEsperaEstudiosClinicos_Click;
             // 
+            // picLogo
+            // 
+            picLogo.Image = (Image)resources.GetObject("picLogo.Image");
+            picLogo.Location = new Point(269, 62);
+            picLogo.Name = "picLogo";
+            picLogo.Size = new Size(148, 118);
+            picLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            picLogo.TabIndex = 7;
+            picLogo.TabStop = false;
+            // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(525, 233);
+            ClientSize = new Size(435, 222);
+            Controls.Add(picLogo);
             Controls.Add(btnListaEsperaEstudiosClinicos);
             Controls.Add(btnGestionEstudios);
             Controls.Add(button3);
@@ -118,6 +132,7 @@
             Controls.Add(btnTurnos);
             Name = "frmMenu";
             Text = "Menu";
+            ((System.ComponentModel.ISupportInitialize)picLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -131,5 +146,6 @@
         private Button button3;
         private Button btnGestionEstudios;
         private Button btnListaEsperaEstudiosClinicos;
+        private PictureBox picLogo;
     }
 }

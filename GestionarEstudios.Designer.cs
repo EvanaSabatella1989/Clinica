@@ -116,12 +116,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(874, 324);
+            ClientSize = new Size(874, 304);
             Controls.Add(btnAgregarEstudio);
             Controls.Add(btnVolverMenu);
             Controls.Add(dgvEstudios);
             Name = "frmGestionarEstudios";
-            Text = "GestionarEstudios";
+            Text = "Gestionar Estudios";
             ((System.ComponentModel.ISupportInitialize)dgvEstudios).EndInit();
             ResumeLayout(false);
         }

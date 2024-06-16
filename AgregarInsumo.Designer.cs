@@ -108,7 +108,7 @@
             Controls.Add(lblNombreInsumo);
             Controls.Add(btnAgregar);
             Name = "frmAgregarInsumo";
-            Text = "AgregarInsumo";
+            Text = "Agregar Insumo";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -38,7 +38,7 @@
             // 
             btnSolicitar.Location = new Point(161, 41);
             btnSolicitar.Name = "btnSolicitar";
-            btnSolicitar.Size = new Size(166, 23);
+            btnSolicitar.Size = new Size(166, 30);
             btnSolicitar.TabIndex = 0;
             btnSolicitar.Text = "Solicitar un turno";
             btnSolicitar.UseVisualStyleBackColor = true;
@@ -46,27 +46,27 @@
             // 
             // button2
             // 
-            button2.Location = new Point(161, 88);
+            button2.Location = new Point(161, 77);
             button2.Name = "button2";
-            button2.Size = new Size(166, 23);
+            button2.Size = new Size(166, 30);
             button2.TabIndex = 1;
             button2.Text = "Cancelar un turno";
             button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            button3.Location = new Point(161, 135);
+            button3.Location = new Point(161, 113);
             button3.Name = "button3";
-            button3.Size = new Size(166, 23);
+            button3.Size = new Size(166, 30);
             button3.TabIndex = 2;
             button3.Text = "Ver turnos";
             button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            button4.Location = new Point(58, 184);
+            button4.Location = new Point(44, 161);
             button4.Name = "button4";
-            button4.Size = new Size(75, 23);
+            button4.Size = new Size(84, 36);
             button4.TabIndex = 3;
             button4.Text = "Atrás";
             button4.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(492, 243);
+            ClientSize = new Size(492, 214);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);

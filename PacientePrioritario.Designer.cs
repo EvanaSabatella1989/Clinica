@@ -62,7 +62,7 @@
             // 
             // btnAgregarPacientePrioritario
             // 
-            btnAgregarPacientePrioritario.Location = new Point(96, 137);
+            btnAgregarPacientePrioritario.Location = new Point(103, 137);
             btnAgregarPacientePrioritario.Name = "btnAgregarPacientePrioritario";
             btnAgregarPacientePrioritario.Size = new Size(75, 40);
             btnAgregarPacientePrioritario.TabIndex = 3;
@@ -90,7 +90,7 @@
             Controls.Add(txtDni);
             Controls.Add(lblDni);
             Name = "frmPacientePrioritario";
-            Text = "PacientePrioritario";
+            Text = "Paciente Prioritario";
             ResumeLayout(false);
             PerformLayout();
         }

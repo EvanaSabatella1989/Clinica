@@ -31,7 +31,7 @@
             btnSolicitar = new Button();
             btnVolver = new Button();
             frmNuevoPaciente = new Button();
-            textBox1 = new TextBox();
+            txtDni = new TextBox();
             lblDni = new Label();
             lblTipoEstudio = new Label();
             cbTipoEstudio = new ComboBox();
@@ -71,12 +71,12 @@
             frmNuevoPaciente.UseVisualStyleBackColor = true;
             frmNuevoPaciente.Click += frmNuevoPaciente_Click;
             // 
-            // textBox1
+            // txtDni
             // 
-            textBox1.Location = new Point(238, 76);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(152, 23);
-            textBox1.TabIndex = 3;
+            txtDni.Location = new Point(238, 76);
+            txtDni.Name = "txtDni";
+            txtDni.Size = new Size(152, 23);
+            txtDni.TabIndex = 3;
             // 
             // lblDni
             // 
@@ -150,12 +150,12 @@
             Controls.Add(cbTipoEstudio);
             Controls.Add(lblTipoEstudio);
             Controls.Add(lblDni);
-            Controls.Add(textBox1);
+            Controls.Add(txtDni);
             Controls.Add(frmNuevoPaciente);
             Controls.Add(btnVolver);
             Controls.Add(btnSolicitar);
             Name = "frmAgendarTurnoEstudios";
-            Text = "AgendarTurnoEstudios";
+            Text = "Agendar Turno Estudio Clínico";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -165,7 +165,7 @@
         private Button btnSolicitar;
         private Button btnVolver;
         private Button frmNuevoPaciente;
-        private TextBox textBox1;
+        private TextBox txtDni;
         private Label lblDni;
         private Label lblTipoEstudio;
         private ComboBox cbTipoEstudio;

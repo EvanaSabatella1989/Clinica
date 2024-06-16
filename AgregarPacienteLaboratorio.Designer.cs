@@ -54,7 +54,7 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(111, 195);
+            btnAgregar.Location = new Point(121, 193);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(91, 42);
             btnAgregar.TabIndex = 3;
@@ -96,7 +96,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(317, 275);
+            ClientSize = new Size(323, 275);
             Controls.Add(chkPrioritario);
             Controls.Add(cbHorarios);
             Controls.Add(chkAyuno);

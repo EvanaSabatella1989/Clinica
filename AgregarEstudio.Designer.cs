@@ -93,7 +93,7 @@
             // 
             btnAgregarEstudio.Location = new Point(114, 243);
             btnAgregarEstudio.Name = "btnAgregarEstudio";
-            btnAgregarEstudio.Size = new Size(145, 23);
+            btnAgregarEstudio.Size = new Size(160, 34);
             btnAgregarEstudio.TabIndex = 6;
             btnAgregarEstudio.Text = "Agregar Estudio";
             btnAgregarEstudio.UseVisualStyleBackColor = true;
@@ -131,7 +131,7 @@
             Controls.Add(lblTipoEstudio);
             Controls.Add(lblIdEstudio);
             Name = "frmAgregarEstudio";
-            Text = "AgregarEstudio";
+            Text = "Agregar Estudio";
             ResumeLayout(false);
             PerformLayout();
         }
