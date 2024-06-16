@@ -27,6 +27,12 @@ namespace Clinica_SePrice
             seccion.Show();
             this.Hide();
         }
+        public frmMenu(string nombreUsuario)
+        {
+            InitializeComponent();
+            this.nombreUsuario = nombreUsuario;
+            lblUsuario.Text = "Usuario: " + nombreUsuario;
+        }
 
         private void btnGestionDeInsumos_Click(object sender, EventArgs e)
         {
