@@ -13,7 +13,7 @@ namespace Clinica_SePrice
     public partial class frmMenu : Form
     {
         private frmGestionarInsumos gestionarInsumosForm;
-
+        private string nombreUsuario;
         public frmMenu()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace Clinica_SePrice
         {
             InitializeComponent();
             this.nombreUsuario = nombreUsuario;
-            lblUsuario.Text = "Usuario: " + nombreUsuario;
+            label2.Text = "Usuario: " + nombreUsuario;
         }
 
         private void btnGestionDeInsumos_Click(object sender, EventArgs e)
