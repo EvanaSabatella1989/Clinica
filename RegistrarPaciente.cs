@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Clinica_SePrice.Datos;
+using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
 
 namespace Clinica_SePrice
@@ -29,48 +24,71 @@ namespace Clinica_SePrice
             }
             else
             {
-                String respuesta;
+                // Verificar si el DNI ya está registrado
+                if (DniExisteEnBaseDeDatos(dniIngresado))
+                {
+                    MessageBox.Show("Ya existe un paciente registrado con ese DNI", "Registro Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 Paciente paciente = new Paciente();
                 paciente.Nombre = txtNombrePaciente.Text;
                 paciente.Apellido = txtApellidoPaciente.Text;
                 paciente.Dni = Convert.ToInt32(txtDniPaciente.Text);
-                paciente.FechaNac = Convert.ToDateTime(dateTimePicker1.Text);
+                paciente.FechaNac = dateTimePicker1.Value;
 
-              
-                respuesta = Datos.Pacientes.NuevoPaciente(paciente);
-                bool esnumero = int.TryParse(respuesta, out int codigo);
-                if (esnumero)
+                string respuesta = Datos.Pacientes.NuevoPaciente(paciente);
+                bool esNumero = int.TryParse(respuesta, out int codigo);
+
+                if (esNumero)
                 {
                     if (codigo == 0)
                     {
-                        MessageBox.Show(" EL PACIENTE YA SE ENCUENTRA REGISTRADO", "AVISO DEL SISTEMA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("El paciente ya se encuentra registrado", "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        MessageBox.Show("Se almaceno con exito el paciente Nro " + respuesta, "AVISO DEL SISTEMA",
-                            MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                        MessageBox.Show($"Se almacenó con éxito el paciente Nro {respuesta}", "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
-                        //Form pagar = new Pagar();
-                        //pagar.ShowDialog();
+
                     }
                 }
-                /* if (dniIngresado == "12345678")
-                 {
-                     MessageBox.Show("Ya existe un paciente registrado con ese DNI", "Registro Fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                 }
-                 else
-                 {
-                     MessageBox.Show("Registro exitoso", "Registro Exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                 }*/
+                else
+                {
+                    MessageBox.Show("Error al intentar guardar el paciente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-
-
         }
 
         private void btnVolverRegistrarPaciente_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private bool DniExisteEnBaseDeDatos(string dni)
+        {
+            bool existe = false;
+
+            try
+            {
+                Conexion conexion = Conexion.getInstancia();
+                using (var conn = conexion.CrearConexion())
+                {
+                    conn.Open();
+                    string query = "SELECT COUNT(*) FROM persona WHERE dni = @dni";
+                    using (var cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@dni", dni);
+                        existe = Convert.ToInt32(cmd.ExecuteScalar()) > 0;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al verificar el DNI: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return existe;
         }
     }
 }

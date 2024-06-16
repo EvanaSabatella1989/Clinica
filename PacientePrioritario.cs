@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+using Clinica_SePrice.Datos;
+using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
 
 namespace Clinica_SePrice
@@ -37,8 +40,14 @@ namespace Clinica_SePrice
                 return;
             }
 
-            string tipoEstudio = cbTipoEstudio.SelectedItem.ToString();
+            var persona = ObtenerPersonaPorDni(dni);
+            if (persona == null)
+            {
+                MessageBox.Show("El número de DNI ingresado no existe en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            string tipoEstudio = cbTipoEstudio.SelectedItem.ToString();
             DataGridView dgv = _frmListaEspera.ObtenerDataGridViewPorTipoEstudio(tipoEstudio);
 
             if (dgv == null)
@@ -64,14 +73,14 @@ namespace Clinica_SePrice
 
             if (index == -1)
             {
-                dgv.Rows.Insert(0, null, "Prioritario", dni, null, null, null);
+                dgv.Rows.Insert(0, null, "Prioritario", dni, persona.Nombre, persona.Apellido, null);
             }
             else
             {
-                dgv.Rows.Insert(index, null, "Prioritario", dni, null, null, null);
+                dgv.Rows.Insert(index, null, "Prioritario", dni, persona.Nombre, persona.Apellido, null);
             }
 
-            string mensaje = $"Paciente prioritario agregado correctamente.\n\nDNI: {dni}\nTipo de estudio: {tipoEstudio}";
+            string mensaje = $"Paciente prioritario agregado correctamente.\n\nDNI: {dni}\nTipo de estudio: {tipoEstudio}\nNombre: {persona.Nombre}\nApellido: {persona.Apellido}";
             MessageBox.Show(mensaje, "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             LimpiarCampos();
@@ -79,11 +88,52 @@ namespace Clinica_SePrice
             this.Close();
         }
 
+        private Persona? ObtenerPersonaPorDni(string dni)
+        {
+            Persona? persona = null;
+
+            try
+            {
+                Conexion conexion = Conexion.getInstancia();
+                using (MySqlConnection conn = conexion.CrearConexion())
+                {
+                    conn.Open();
+                    string query = "SELECT nombre, apellido FROM persona WHERE dni = @dni";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@dni", dni);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                persona = new Persona
+                                {
+                                    Nombre = reader.GetString("nombre"),
+                                    Apellido = reader.GetString("apellido")
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al verificar el DNI: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return persona;
+        }
 
         private void LimpiarCampos()
         {
             txtDni.Text = "";
             cbTipoEstudio.SelectedIndex = -1;
+        }
+
+        public class Persona
+        {
+            public string Nombre { get; set; }
+            public string Apellido { get; set; }
         }
     }
 }

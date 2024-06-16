@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mivfj4tYRpU=",
+  "dgSpecHash": "2vEZx45+G0c=",
   "success": true,
-  "projectFilePath": "C:\\Users\\mstei\\source\\repos\\Clinica\\Clinica SePrice.csproj",
+  "projectFilePath": "C:\\Users\\mstei\\Source\\Repos\\Clinica\\Clinica SePrice.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mstei\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\mstei\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

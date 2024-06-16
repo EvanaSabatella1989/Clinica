@@ -10,11 +10,11 @@
 
 
             dtpFecha.ValueChanged += new EventHandler(dtpFecha_ValueChanged);
-            dtpFecha_ValueChanged(this, EventArgs.Empty); 
+            dtpFecha_ValueChanged(this, EventArgs.Empty);
 
             cbHorario.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            
+
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@
                     {
                         for (int minute = 0; minute < 60; minute += 15)
                         {
-                            if (hour == 16 && minute > 45) break; 
+                            if (hour == 16 && minute > 45) break;
                             horarios.Add($"{hour:D2}:{minute:D2}");
                         }
                     }
@@ -66,7 +66,7 @@
                     {
                         for (int minute = 0; minute < 60; minute += 15)
                         {
-                            if (hour == 12 && minute > 45) break; 
+                            if (hour == 12 && minute > 45) break;
                             horarios.Add($"{hour:D2}:{minute:D2}");
                         }
                     }

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Clinica_SePrice.Datos;
+using MySql.Data.MySqlClient;
+using System;
 using System.Windows.Forms;
-
 
 namespace Clinica_SePrice
 {
@@ -34,6 +28,7 @@ namespace Clinica_SePrice
                 ConfigurarComboBoxHorarios();
             }
         }
+
         private void ConfigurarComboBoxHorarios()
         {
             cbHorarios.Items.Clear();
@@ -89,7 +84,6 @@ namespace Clinica_SePrice
             ConfigurarComboBoxHorarios();
         }
 
-
         private void chkPrioritario_CheckedChanged(object sender, EventArgs e)
         {
             if (chkPrioritario.Checked)
@@ -134,9 +128,16 @@ namespace Clinica_SePrice
 
             string dni = txtDni.Text.Trim();
 
-            if (!EsNumeroValido(txtDni.Text.Trim()))
+            if (!EsNumeroValido(dni))
             {
                 MessageBox.Show("El número de DNI ingresado no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            var persona = ObtenerPersonaPorDni(dni);
+            if (persona == null)
+            {
+                MessageBox.Show("El número de DNI ingresado no existe en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -159,7 +160,7 @@ namespace Clinica_SePrice
                     index = 0;
                 }
 
-                dgvLaboratorio.Rows.Insert(index, null, "Prioritario", dni, null, null, null);
+                dgvLaboratorio.Rows.Insert(index, null, "Prioritario", dni, persona.Nombre, persona.Apellido, null);
             }
             else
             {
@@ -178,7 +179,7 @@ namespace Clinica_SePrice
                     _ultimoHorarioAgregado = DateTime.Today.AddHours(16).AddMinutes(45);
                 }
 
-                dgvLaboratorio.Rows.Add(null, horario, dni, null, null, null);
+                dgvLaboratorio.Rows.Add(null, horario, dni, persona.Nombre, persona.Apellido, null);
             }
 
             _frmListaEspera.UltimoHorarioAgregadoLaboratorio = _ultimoHorarioAgregado;
@@ -190,10 +191,45 @@ namespace Clinica_SePrice
             this.Close();
         }
 
+        private Persona? ObtenerPersonaPorDni(string dni)
+        {
+            Persona? persona = null;
+
+            try
+            {
+                Conexion conexion = Conexion.getInstancia();
+                using (MySqlConnection conn = conexion.CrearConexion())
+                {
+                    conn.Open();
+                    string query = "SELECT nombre, apellido FROM persona WHERE dni = @dni";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@dni", dni);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                persona = new Persona
+                                {
+                                    Nombre = reader.GetString("nombre"),
+                                    Apellido = reader.GetString("apellido")
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al verificar el DNI: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return persona;
+        }
 
         private bool EsNumeroValido(string dni)
         {
-            return int.TryParse(dni, out _);
+            return long.TryParse(dni, out _);
         }
 
         private void LimpiarControles()
@@ -210,5 +246,11 @@ namespace Clinica_SePrice
             chkAyuno.Visible = true;
             cbHorarios.Visible = true;
         }
+    }
+
+    public class Persona
+    {
+        public string Nombre { get; set; }
+        public string Apellido { get; set; }
     }
 }

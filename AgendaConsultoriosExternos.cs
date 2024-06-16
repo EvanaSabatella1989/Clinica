@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Clinica_SePrice
 {
-    public partial class Agenda : Form
+    public partial class frmAgendaConsultoriosExternos : Form
     {
-        public Agenda()
+        public frmAgendaConsultoriosExternos()
         {
             InitializeComponent();
         }
@@ -20,6 +20,7 @@ namespace Clinica_SePrice
         private void btnSolicitar_Click(object sender, EventArgs e)
         {
             Form generarTurno = new GenerarTurno();
+            generarTurno.StartPosition = FormStartPosition.CenterScreen;
             generarTurno.Show();
             this.WindowState = FormWindowState.Minimized;
         }

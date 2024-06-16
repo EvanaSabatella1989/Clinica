@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Clinica SePrice")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51759b9f617c649aabd241f2f115b400a021b237")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c151daff2918c73320aefe1ab4a6e3a614d22b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Clinica SePrice")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Clinica SePrice")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

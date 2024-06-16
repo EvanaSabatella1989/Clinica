@@ -1,6 +1,6 @@
 ﻿namespace Clinica_SePrice
 {
-    partial class Agenda
+    partial class frmAgendaConsultoriosExternos
     {
         /// <summary>
         /// Required designer variable.
@@ -71,7 +71,7 @@
             button4.Text = "Atrás";
             button4.UseVisualStyleBackColor = true;
             // 
-            // Agenda
+            // frmAgendaConsultoriosExternos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -80,8 +80,8 @@
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(btnSolicitar);
-            Name = "Agenda";
-            Text = "Agenda";
+            Name = "frmAgendaConsultoriosExternos";
+            Text = "Agenda Consultorios Externos";
             ResumeLayout(false);
         }
 

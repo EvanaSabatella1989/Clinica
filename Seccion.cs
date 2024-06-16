@@ -19,7 +19,8 @@ namespace Clinica_SePrice
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form agenda = new Agenda();
+            Form agenda = new frmAgendaConsultoriosExternos();
+            agenda.StartPosition = FormStartPosition.CenterScreen;
             agenda.Show();
             this.WindowState = FormWindowState.Minimized;
         }

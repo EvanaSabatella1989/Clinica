@@ -275,3 +275,4 @@ namespace Clinica_SePrice
         }
     }
 }
+
