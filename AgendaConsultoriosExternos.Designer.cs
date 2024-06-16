@@ -29,67 +29,131 @@
         private void InitializeComponent()
         {
             btnSolicitar = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            btnAtras = new Button();
+            dgvAgendaConsultorios = new DataGridView();
+            colId = new DataGridViewTextBoxColumn();
+            colFecha = new DataGridViewTextBoxColumn();
+            colHorario = new DataGridViewTextBoxColumn();
+            colDni = new DataGridViewTextBoxColumn();
+            colNombre = new DataGridViewTextBoxColumn();
+            colApellido = new DataGridViewTextBoxColumn();
+            colMedico = new DataGridViewTextBoxColumn();
+            colEspecialidad = new DataGridViewTextBoxColumn();
+            colAcciones = new DataGridViewButtonColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvAgendaConsultorios).BeginInit();
             SuspendLayout();
             // 
             // btnSolicitar
             // 
-            btnSolicitar.Location = new Point(161, 41);
+            btnSolicitar.Location = new Point(835, 12);
             btnSolicitar.Name = "btnSolicitar";
-            btnSolicitar.Size = new Size(166, 30);
+            btnSolicitar.Size = new Size(166, 36);
             btnSolicitar.TabIndex = 0;
             btnSolicitar.Text = "Solicitar un turno";
             btnSolicitar.UseVisualStyleBackColor = true;
             btnSolicitar.Click += btnSolicitar_Click;
             // 
-            // button2
+            // btnAtras
             // 
-            button2.Location = new Point(161, 77);
-            button2.Name = "button2";
-            button2.Size = new Size(166, 30);
-            button2.TabIndex = 1;
-            button2.Text = "Cancelar un turno";
-            button2.UseVisualStyleBackColor = true;
+            btnAtras.Location = new Point(12, 12);
+            btnAtras.Name = "btnAtras";
+            btnAtras.Size = new Size(84, 36);
+            btnAtras.TabIndex = 3;
+            btnAtras.Text = "Atrás";
+            btnAtras.UseVisualStyleBackColor = true;
+            btnAtras.Click += btnAtras_Click;
             // 
-            // button3
+            // dgvAgendaConsultorios
             // 
-            button3.Location = new Point(161, 113);
-            button3.Name = "button3";
-            button3.Size = new Size(166, 30);
-            button3.TabIndex = 2;
-            button3.Text = "Ver turnos";
-            button3.UseVisualStyleBackColor = true;
+            dgvAgendaConsultorios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAgendaConsultorios.Columns.AddRange(new DataGridViewColumn[] { colId, colFecha, colHorario, colDni, colNombre, colApellido, colMedico, colEspecialidad, colAcciones });
+            dgvAgendaConsultorios.Location = new Point(12, 65);
+            dgvAgendaConsultorios.Name = "dgvAgendaConsultorios";
+            dgvAgendaConsultorios.Size = new Size(989, 227);
+            dgvAgendaConsultorios.TabIndex = 4;
             // 
-            // button4
+            // colId
             // 
-            button4.Location = new Point(44, 161);
-            button4.Name = "button4";
-            button4.Size = new Size(84, 36);
-            button4.TabIndex = 3;
-            button4.Text = "Atrás";
-            button4.UseVisualStyleBackColor = true;
+            colId.HeaderText = "Id";
+            colId.Name = "colId";
+            colId.Width = 70;
+            // 
+            // colFecha
+            // 
+            colFecha.HeaderText = "Fecha";
+            colFecha.Name = "colFecha";
+            colFecha.Width = 70;
+            // 
+            // colHorario
+            // 
+            colHorario.HeaderText = "Horario";
+            colHorario.Name = "colHorario";
+            colHorario.Width = 70;
+            // 
+            // colDni
+            // 
+            colDni.HeaderText = "DNI";
+            colDni.Name = "colDni";
+            colDni.Width = 70;
+            // 
+            // colNombre
+            // 
+            colNombre.HeaderText = "Nombre";
+            colNombre.Name = "colNombre";
+            colNombre.Width = 140;
+            // 
+            // colApellido
+            // 
+            colApellido.HeaderText = "Apellido";
+            colApellido.Name = "colApellido";
+            colApellido.Width = 140;
+            // 
+            // colMedico
+            // 
+            colMedico.HeaderText = "Médico";
+            colMedico.Name = "colMedico";
+            colMedico.Width = 140;
+            // 
+            // colEspecialidad
+            // 
+            colEspecialidad.HeaderText = "Especialidad";
+            colEspecialidad.Name = "colEspecialidad";
+            // 
+            // colAcciones
+            // 
+            colAcciones.HeaderText = "Acciones";
+            colAcciones.Name = "colAcciones";
+            colAcciones.Resizable = DataGridViewTriState.True;
+            colAcciones.SortMode = DataGridViewColumnSortMode.Automatic;
+            colAcciones.Width = 150;
             // 
             // frmAgendaConsultoriosExternos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(492, 214);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            ClientSize = new Size(1006, 298);
+            Controls.Add(dgvAgendaConsultorios);
+            Controls.Add(btnAtras);
             Controls.Add(btnSolicitar);
             Name = "frmAgendaConsultoriosExternos";
             Text = "Agenda Consultorios Externos";
+            ((System.ComponentModel.ISupportInitialize)dgvAgendaConsultorios).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button btnSolicitar;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btnAtras;
+        private DataGridView dgvAgendaConsultorios;
+        private DataGridViewTextBoxColumn colId;
+        private DataGridViewTextBoxColumn colFecha;
+        private DataGridViewTextBoxColumn colHorario;
+        private DataGridViewTextBoxColumn colDni;
+        private DataGridViewTextBoxColumn colNombre;
+        private DataGridViewTextBoxColumn colApellido;
+        private DataGridViewTextBoxColumn colMedico;
+        private DataGridViewTextBoxColumn colEspecialidad;
+        private DataGridViewButtonColumn colAcciones;
     }
 }

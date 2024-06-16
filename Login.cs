@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace Clinica_SePrice
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
-        public Login()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -33,7 +33,7 @@ namespace Clinica_SePrice
             }
             else
             {
-                MessageBox.Show("El usuario y/o contraseña incorrecto");
+                MessageBox.Show("El usuario y/o contraseña es incorrecto");
             }
         }
     }

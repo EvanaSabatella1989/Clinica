@@ -1,6 +1,6 @@
 ﻿namespace Clinica_SePrice
 {
-    partial class GenerarTurno
+    partial class frmGenerarTurno
     {
         /// <summary>
         /// Required designer variable.
@@ -129,7 +129,7 @@
             btnVerificarDni.UseVisualStyleBackColor = true;
             btnVerificarDni.Click += btnVerificarDni_Click;
             // 
-            // GenerarTurno
+            // frmGenerarTurno
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -144,7 +144,7 @@
             Controls.Add(textBoxDni);
             Controls.Add(lblDni);
             Controls.Add(dateTimePicker);
-            Name = "GenerarTurno";
+            Name = "frmGenerarTurno";
             Text = "Generar Turno Consultorios Externos";
             ResumeLayout(false);
             PerformLayout();

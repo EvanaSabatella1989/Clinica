@@ -33,7 +33,7 @@
             label1 = new Label();
             label2 = new Label();
             btnGestionDeInsumos = new Button();
-            button3 = new Button();
+            btnSalir = new Button();
             btnGestionEstudios = new Button();
             btnListaEsperaEstudiosClinicos = new Button();
             picLogo = new PictureBox();
@@ -78,14 +78,15 @@
             btnGestionDeInsumos.UseVisualStyleBackColor = true;
             btnGestionDeInsumos.Click += btnGestionDeInsumos_Click;
             // 
-            // button3
+            // btnSalir
             // 
-            button3.Location = new Point(342, 21);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 4;
-            button3.Text = "Salir";
-            button3.UseVisualStyleBackColor = true;
+            btnSalir.Location = new Point(342, 21);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(75, 23);
+            btnSalir.TabIndex = 4;
+            btnSalir.Text = "Salir";
+            btnSalir.UseVisualStyleBackColor = true;
+            btnSalir.Click += button3_Click;
             // 
             // btnGestionEstudios
             // 
@@ -125,7 +126,7 @@
             Controls.Add(picLogo);
             Controls.Add(btnListaEsperaEstudiosClinicos);
             Controls.Add(btnGestionEstudios);
-            Controls.Add(button3);
+            Controls.Add(btnSalir);
             Controls.Add(btnGestionDeInsumos);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -143,7 +144,7 @@
         private Label label1;
         private Label label2;
         private Button btnGestionDeInsumos;
-        private Button button3;
+        private Button btnSalir;
         private Button btnGestionEstudios;
         private Button btnListaEsperaEstudiosClinicos;
         private PictureBox picLogo;

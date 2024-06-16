@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Clinica_SePrice.Datos;
+using System;
 using System.Windows.Forms;
 
 namespace Clinica_SePrice
@@ -15,14 +9,40 @@ namespace Clinica_SePrice
         public frmAgendaConsultoriosExternos()
         {
             InitializeComponent();
+            this.dgvAgendaConsultorios.AllowUserToAddRows = false;
+
+
+        }
+
+        public void AgregarTurno(DateTime fecha, string horario, string dni, string nombre, string apellido, string medico, string especialidad)
+        {
+            int id = dgvAgendaConsultorios.Rows.Count + 1;
+
+            dgvAgendaConsultorios.Rows.Add(id, fecha.ToShortDateString(), horario, dni, nombre, apellido, medico, especialidad, "Acciones");
+        }
+
+        public void CambiarEstadoBotonAcreditadoEnDGV(int rowIndex)
+        {
+            if (rowIndex >= 0 && rowIndex < dgvAgendaConsultorios.Rows.Count)
+            {
+                dgvAgendaConsultorios.Rows[rowIndex].Cells["colAcciones"].Value = "Acreditado";
+            }
         }
 
         private void btnSolicitar_Click(object sender, EventArgs e)
         {
-            Form generarTurno = new GenerarTurno();
+            frmGenerarTurno generarTurno = new frmGenerarTurno();
+            generarTurno.FormAgendaConsultoriosExternos = this;
             generarTurno.StartPosition = FormStartPosition.CenterScreen;
             generarTurno.Show();
-            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            frmSeccion seccionForm = new frmSeccion();
+            seccionForm.StartPosition = FormStartPosition.CenterScreen;
+            seccionForm.Show();
+            this.Close();
         }
     }
 }

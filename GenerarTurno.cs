@@ -1,17 +1,17 @@
 ﻿using Clinica_SePrice.Datos;
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Clinica_SePrice
 {
-    public partial class GenerarTurno : Form
+    public partial class frmGenerarTurno : Form
     {
-        private readonly Conexion conexion = Conexion.getInstancia();
-        private readonly Dictionary<string, string> pacientesRegistrados = new Dictionary<string, string>();
+        public frmAgendaConsultoriosExternos FormAgendaConsultoriosExternos { get; set; }
 
-        public GenerarTurno()
+        private readonly Conexion conexion = Conexion.getInstancia();
+
+        public frmGenerarTurno()
         {
             InitializeComponent();
             InitializeDateTimePicker();
@@ -31,9 +31,6 @@ namespace Clinica_SePrice
             comboBoxEspecialidad.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxMedico.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            comboBoxEspecialidad.Items.AddRange(new string[] { "Cardiología", "Dermatología", "Pediatría", "Neurología" });
-            comboBoxMedico.Items.AddRange(new string[] { "Dr. Pérez", "Dr. López", "Dra. García", "Dr. Fernández" });
-
             if (comboBoxEspecialidad.Items.Count > 0)
                 comboBoxEspecialidad.SelectedIndex = 0;
 
@@ -45,19 +42,29 @@ namespace Clinica_SePrice
         {
             listBox.Items.Clear();
 
-            TimeSpan startTime = new TimeSpan(9, 0, 0); // 9:00 AM
-            TimeSpan endTime = new TimeSpan(17, 0, 0); // 5:00 PM
             TimeSpan interval = new TimeSpan(0, 30, 0); // Intervalo de 30 minutos
 
             DateTime selectedDate = dateTimePicker.Value.Date;
+            DateTime today = DateTime.Today;
 
-            if (selectedDate == DateTime.Today)
+            TimeSpan now = DateTime.Now.TimeOfDay;
+            TimeSpan startTime = new TimeSpan(9, 0, 0); // Inicio de horarios a las 9:00 AM
+            TimeSpan endTime = new TimeSpan(16, 30, 0); // Fin de horarios a las 4:30 PM
+
+            if (selectedDate == today && now < endTime)
             {
-                TimeSpan now = DateTime.Now.TimeOfDay;
                 startTime = now > startTime ? now : startTime;
+
+                int minutesToAdd = interval.Minutes - (now.Minutes % interval.Minutes);
+                startTime = now.Add(TimeSpan.FromMinutes(minutesToAdd));
             }
 
-            for (TimeSpan time = startTime; time < endTime; time += interval)
+            if (selectedDate == today)
+            {
+                endTime = new TimeSpan(17, 0, 0);
+            }
+
+            for (TimeSpan time = startTime; time <= endTime; time += interval)
             {
                 listBox.Items.Add(time.ToString(@"hh\:mm"));
             }
@@ -125,11 +132,17 @@ namespace Clinica_SePrice
                 return;
             }
 
+            // Verificar que el DNI existe en la base de datos
             if (!DniExisteEnBaseDeDatos(dni))
             {
                 MessageBox.Show("El DNI ingresado no está registrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            // Obtener nombre y apellido desde la base de datos
+            string nombre;
+            string apellido;
+            ObtenerNombreYApellidoPorDni(dni, out nombre, out apellido);
 
             if (listBox.SelectedItem == null)
             {
@@ -155,38 +168,47 @@ namespace Clinica_SePrice
             string selectedTime = listBox.SelectedItem.ToString();
             DateTime selectedDateTime = DateTime.Parse(selectedDate.ToShortDateString() + " " + selectedTime);
 
-            int idPaciente = ObtenerIdPacientePorDni(dni);
+            frmAgendaConsultoriosExternos agendaForm = Application.OpenForms.OfType<frmAgendaConsultoriosExternos>().FirstOrDefault();
+            if (agendaForm != null)
+            {
+                agendaForm.AgregarTurno(selectedDate, selectedTime, dni, nombre, apellido, medico, especialidad);
+            }
 
             MessageBox.Show("Turno reservado correctamente.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            this.Close();
         }
 
-        private int ObtenerIdPacientePorDni(string dni)
+
+        private void ObtenerNombreYApellidoPorDni(string dni, out string nombre, out string apellido)
         {
-            int idPaciente = 0;
+            nombre = string.Empty;
+            apellido = string.Empty;
 
             try
             {
                 using (MySqlConnection conn = conexion.CrearConexion())
                 {
                     conn.Open();
-                    string query = "SELECT idPaciente FROM paciente AS pa JOIN persona AS p ON pa.idPersona = p.idPersona WHERE p.dni = @dni";
+                    string query = "SELECT nombre, apellido FROM persona WHERE dni = @dni";
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@dni", dni);
-                        object result = cmd.ExecuteScalar();
-                        if (result != null)
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
                         {
-                            idPaciente = Convert.ToInt32(result);
+                            if (reader.Read())
+                            {
+                                nombre = reader["nombre"].ToString();
+                                apellido = reader["apellido"].ToString();
+                            }
                         }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al obtener el ID del paciente: " + ex.Message);
+                MessageBox.Show("Error al obtener nombre y apellido: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            return idPaciente;
         }
     }
 }

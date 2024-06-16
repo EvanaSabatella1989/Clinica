@@ -1,6 +1,6 @@
 ﻿namespace Clinica_SePrice
 {
-    partial class Login
+    partial class frmLogin
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             txtUsuario = new TextBox();
             txtContrasena = new TextBox();
             lblUsuario = new Label();
@@ -89,7 +89,7 @@
             btnIngresar.UseVisualStyleBackColor = true;
             btnIngresar.Click += button1_Click;
             // 
-            // Login
+            // frmLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -100,7 +100,7 @@
             Controls.Add(lblUsuario);
             Controls.Add(txtContrasena);
             Controls.Add(txtUsuario);
-            Name = "Login";
+            Name = "frmLogin";
             Text = "Ingreso Clinica SePrice";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
