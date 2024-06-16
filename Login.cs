@@ -24,6 +24,7 @@ namespace Clinica_SePrice
                 string nUsuario = dt.Rows[0][1] != null ? dt.Rows[0][1].ToString() : "N/A";
                 Form menu = new frmMenu(nUsuario);
                 menu.ShowDialog();
+                this.Hide();
 
             }
             else
