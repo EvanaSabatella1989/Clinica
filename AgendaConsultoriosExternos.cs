@@ -18,7 +18,7 @@ namespace Clinica_SePrice
         {
             int id = dgvAgendaConsultorios.Rows.Count + 1;
 
-            dgvAgendaConsultorios.Rows.Add(id, fecha.ToShortDateString(), horario, dni, nombre, apellido, medico, especialidad, "Acciones");
+            dgvAgendaConsultorios.Rows.Add(id, fecha.ToShortDateString(), horario, dni, nombre, apellido, medico, especialidad, "Acreditar");
         }
 
         public void CambiarEstadoBotonAcreditadoEnDGV(int rowIndex)

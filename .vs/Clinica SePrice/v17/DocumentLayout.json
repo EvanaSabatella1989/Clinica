@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\mstei\\source\\repos\\Clinica\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE9C5F0-AE8D-434E-9C80-FDECD3AE6452}|Clinica SePrice.csproj|c:\\users\\mstei\\source\\repos\\clinica\\generarturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE9C5F0-AE8D-434E-9C80-FDECD3AE6452}|Clinica SePrice.csproj|solutionrelative:generarturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE9C5F0-AE8D-434E-9C80-FDECD3AE6452}|Clinica SePrice.csproj|c:\\users\\mstei\\source\\repos\\clinica\\generarturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{6AE9C5F0-AE8D-434E-9C80-FDECD3AE6452}|Clinica SePrice.csproj|solutionrelative:generarturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AE9C5F0-AE8D-434E-9C80-FDECD3AE6452}|Clinica SePrice.csproj|c:\\users\\mstei\\source\\repos\\clinica\\agendaconsultoriosexternos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AE9C5F0-AE8D-434E-9C80-FDECD3AE6452}|Clinica SePrice.csproj|solutionrelative:agendaconsultoriosexternos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +22,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenerarTurno.cs",
+              "DocumentMoniker": "C:\\Users\\mstei\\source\\repos\\Clinica\\GenerarTurno.cs",
+              "RelativeDocumentMoniker": "GenerarTurno.cs",
+              "ToolTip": "C:\\Users\\mstei\\source\\repos\\Clinica\\GenerarTurno.cs",
+              "RelativeToolTip": "GenerarTurno.cs",
+              "ViewState": "AQIAAKMAAAAAAAAAAAAAAK4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T19:32:05.866Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GenerarTurno.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\mstei\\source\\repos\\Clinica\\GenerarTurno.cs",
+              "RelativeDocumentMoniker": "GenerarTurno.cs",
+              "ToolTip": "C:\\Users\\mstei\\source\\repos\\Clinica\\GenerarTurno.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GenerarTurno.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T19:32:03.51Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AgendaConsultoriosExternos.cs",
+              "DocumentMoniker": "C:\\Users\\mstei\\source\\repos\\Clinica\\AgendaConsultoriosExternos.cs",
+              "RelativeDocumentMoniker": "AgendaConsultoriosExternos.cs",
+              "ToolTip": "C:\\Users\\mstei\\source\\repos\\Clinica\\AgendaConsultoriosExternos.cs",
+              "RelativeToolTip": "AgendaConsultoriosExternos.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAgwDAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T19:31:29.798Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -132,14 +132,12 @@ namespace Clinica_SePrice
                 return;
             }
 
-            // Verificar que el DNI existe en la base de datos
             if (!DniExisteEnBaseDeDatos(dni))
             {
                 MessageBox.Show("El DNI ingresado no está registrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Obtener nombre y apellido desde la base de datos
             string nombre;
             string apellido;
             ObtenerNombreYApellidoPorDni(dni, out nombre, out apellido);
@@ -168,6 +166,20 @@ namespace Clinica_SePrice
             string selectedTime = listBox.SelectedItem.ToString();
             DateTime selectedDateTime = DateTime.Parse(selectedDate.ToShortDateString() + " " + selectedTime);
 
+            if (selectedDateTime < DateTime.Now)
+            {
+                MessageBox.Show("No se puede reservar un turno en una fecha u hora anterior a la actual.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                listBox.Items.Clear(); 
+                return;
+            }
+
+            if (selectedDate == DateTime.Today && DateTime.Now.TimeOfDay >= new TimeSpan(17, 0, 0))
+            {
+                MessageBox.Show("No hay turnos disponibles para hoy después de las 17:00 horas.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                listBox.Items.Clear(); 
+                return;
+            }
+
             frmAgendaConsultoriosExternos agendaForm = Application.OpenForms.OfType<frmAgendaConsultoriosExternos>().FirstOrDefault();
             if (agendaForm != null)
             {
@@ -178,6 +190,7 @@ namespace Clinica_SePrice
 
             this.Close();
         }
+
 
 
         private void ObtenerNombreYApellidoPorDni(string dni, out string nombre, out string apellido)
