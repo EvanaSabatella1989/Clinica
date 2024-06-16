@@ -1,4 +1,5 @@
 ﻿using Clinica_SePrice.Datos;
+
 using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
@@ -162,6 +163,8 @@ namespace Clinica_SePrice
                 return;
             }
 
+            Datos.Turnos.CrearTurno( )
+
             string especialidad = comboBoxEspecialidad.SelectedItem.ToString();
             string medico = comboBoxMedico.SelectedItem.ToString();
             DateTime selectedDate = dateTimePicker.Value.Date;
@@ -208,6 +211,68 @@ namespace Clinica_SePrice
             catch (Exception ex)
             {
                 MessageBox.Show("Error al obtener nombre y apellido: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+        private void ObtenerIdPorDni(string dni, int idPaciente)
+        {
+            //idPaciente = int;
+
+
+            try
+            {
+                using (MySqlConnection conn = conexion.CrearConexion())
+                {
+                    conn.Open();
+                    string query = "SELECT idPaciente FROM persona INNER JOIN paciente WHERE persona.idPersona= paciente.idPersona and persona.dni = @dni";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@dni", dni);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                idPaciente = int.Parse(reader["idPaciente"].ToString());
+
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener idPaciente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void ObtenerMedicoPorDni(string dni, int idPaciente)
+        {
+            //idPaciente = int;
+
+
+            try
+            {
+                using (MySqlConnection conn = conexion.CrearConexion())
+                {
+                    conn.Open();
+                    string query = "SELECT idMedico FROM persona INNER JOIN medico WHERE persona.idPersona= paciente.idMedico and persona.dni = @dni";
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@dni", dni);
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                idPaciente = int.Parse(reader["idPaciente"].ToString());
+
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al obtener idPaciente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
