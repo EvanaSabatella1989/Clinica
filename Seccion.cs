@@ -32,5 +32,13 @@ namespace Clinica_SePrice
             agendarTurnoEstudios.Show();
             this.Close();
         }
+
+        private void btnVolverMenu_Click(object sender, EventArgs e)
+        {
+            frmMenu menu = new frmMenu();
+            menu.StartPosition = FormStartPosition.CenterScreen;
+            menu.Show();
+            this.Close();
+        }
     }
 }

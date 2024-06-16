@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mstei\\Source\\Repos\\Clinica\\Clinica SePrice.csproj": {}
+    "C:\\Users\\mstei\\source\\repos\\Clinica\\Clinica SePrice.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mstei\\Source\\Repos\\Clinica\\Clinica SePrice.csproj": {
+    "C:\\Users\\mstei\\source\\repos\\Clinica\\Clinica SePrice.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mstei\\Source\\Repos\\Clinica\\Clinica SePrice.csproj",
+        "projectUniqueName": "C:\\Users\\mstei\\source\\repos\\Clinica\\Clinica SePrice.csproj",
         "projectName": "Clinica SePrice",
-        "projectPath": "C:\\Users\\mstei\\Source\\Repos\\Clinica\\Clinica SePrice.csproj",
+        "projectPath": "C:\\Users\\mstei\\source\\repos\\Clinica\\Clinica SePrice.csproj",
         "packagesPath": "C:\\Users\\mstei\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mstei\\Source\\Repos\\Clinica\\obj\\",
+        "outputPath": "C:\\Users\\mstei\\source\\repos\\Clinica\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

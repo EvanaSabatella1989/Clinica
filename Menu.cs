@@ -17,7 +17,7 @@ namespace Clinica_SePrice
         public frmMenu()
         {
             InitializeComponent();
-            gestionarInsumosForm = new frmGestionarInsumos(); 
+            gestionarInsumosForm = new frmGestionarInsumos();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,18 +25,15 @@ namespace Clinica_SePrice
             Form seccion = new frmSeccion();
             seccion.StartPosition = FormStartPosition.CenterScreen;
             seccion.Show();
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            this.Hide();
         }
 
         private void btnGestionDeInsumos_Click(object sender, EventArgs e)
         {
-            gestionarInsumosForm.StartPosition = FormStartPosition.CenterScreen;
-            gestionarInsumosForm.Show();
+            Form GestionDeInsumos = new frmGestionarInsumos();
+            GestionDeInsumos.StartPosition = FormStartPosition.CenterScreen;
+            GestionDeInsumos.Show();
+            this.Hide();
         }
 
         private void btnGestionEstudios_Click(object sender, EventArgs e)
@@ -44,14 +41,16 @@ namespace Clinica_SePrice
             Form GestionDeEstudios = new frmGestionarEstudios();
             GestionDeEstudios.StartPosition = FormStartPosition.CenterScreen;
             GestionDeEstudios.Show();
-            this.WindowState = FormWindowState.Minimized;
+            this.Hide();
         }
-
         private void btnListaEsperaEstudiosClinicos_Click(object sender, EventArgs e)
         {
             frmAgendaEstudiosClinicos listaEsperaEstudiosClinicosForm = new frmAgendaEstudiosClinicos(gestionarInsumosForm);
             listaEsperaEstudiosClinicosForm.StartPosition = FormStartPosition.CenterScreen;
             listaEsperaEstudiosClinicosForm.Show();
+            this.Hide();
         }
+
+        
     }
 }

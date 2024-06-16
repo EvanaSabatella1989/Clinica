@@ -1,5 +1,7 @@
 using Clinica_SePrice.Datos;
+using System;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Clinica_SePrice
 {
@@ -10,16 +12,6 @@ namespace Clinica_SePrice
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Usuarios usuarios = new Usuarios();
@@ -27,25 +19,22 @@ namespace Clinica_SePrice
             Datos.Usuarios dato = new Datos.Usuarios();
             //dt = dato.Login(txtUsuario.Text, txtContrasena.Text);
 
-           // if (dt.Rows.Count > 0)
-           // {
+            bool loginExitoso = true; 
+
+            if (loginExitoso)
+            {
                 MessageBox.Show("Ingreso exitoso");
-                Form menu = new frmMenu();
+
+                frmMenu menu = new frmMenu();
                 menu.StartPosition = FormStartPosition.CenterScreen;
-
                 menu.Show();
-                //this.Hide();
-                this.WindowState = FormWindowState.Minimized;
-                //ShowInTaskbar = true;
 
-
-           // }
-           // else
-          //  {
-          //      MessageBox.Show("El usuario y/o contraseña incorrecto ");
-
-
-          //  }
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("El usuario y/o contraseña incorrecto");
+            }
         }
     }
 }

@@ -33,6 +33,7 @@
             pictureBox2 = new PictureBox();
             btnConsultoriosExternos = new Button();
             btnEstudiosClinicos = new Button();
+            btnVolverMenu = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -40,7 +41,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(57, 32);
+            pictureBox1.Location = new Point(57, 57);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(172, 174);
             pictureBox1.TabIndex = 0;
@@ -49,7 +50,7 @@
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(290, 32);
+            pictureBox2.Location = new Point(290, 57);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(168, 174);
             pictureBox2.TabIndex = 1;
@@ -57,7 +58,7 @@
             // 
             // btnConsultoriosExternos
             // 
-            btnConsultoriosExternos.Location = new Point(57, 225);
+            btnConsultoriosExternos.Location = new Point(57, 237);
             btnConsultoriosExternos.Name = "btnConsultoriosExternos";
             btnConsultoriosExternos.Size = new Size(172, 23);
             btnConsultoriosExternos.TabIndex = 2;
@@ -67,7 +68,7 @@
             // 
             // btnEstudiosClinicos
             // 
-            btnEstudiosClinicos.Location = new Point(290, 225);
+            btnEstudiosClinicos.Location = new Point(290, 237);
             btnEstudiosClinicos.Name = "btnEstudiosClinicos";
             btnEstudiosClinicos.Size = new Size(168, 23);
             btnEstudiosClinicos.TabIndex = 3;
@@ -75,11 +76,22 @@
             btnEstudiosClinicos.UseVisualStyleBackColor = true;
             btnEstudiosClinicos.Click += btnEstudiosClinicos_Click;
             // 
+            // btnVolverMenu
+            // 
+            btnVolverMenu.Location = new Point(12, 12);
+            btnVolverMenu.Name = "btnVolverMenu";
+            btnVolverMenu.Size = new Size(109, 23);
+            btnVolverMenu.TabIndex = 4;
+            btnVolverMenu.Text = "Volver al menú";
+            btnVolverMenu.UseVisualStyleBackColor = true;
+            btnVolverMenu.Click += btnVolverMenu_Click;
+            // 
             // frmSeccion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(525, 263);
+            ClientSize = new Size(525, 281);
+            Controls.Add(btnVolverMenu);
             Controls.Add(btnEstudiosClinicos);
             Controls.Add(btnConsultoriosExternos);
             Controls.Add(pictureBox2);
@@ -97,5 +109,6 @@
         private PictureBox pictureBox2;
         private Button btnConsultoriosExternos;
         private Button btnEstudiosClinicos;
+        private Button btnVolverMenu;
     }
 }

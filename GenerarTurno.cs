@@ -1,6 +1,7 @@
 ﻿using Clinica_SePrice.Datos;
 using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Clinica_SePrice
@@ -13,30 +14,36 @@ namespace Clinica_SePrice
         public GenerarTurno()
         {
             InitializeComponent();
+            InitializeDateTimePicker();
             dateTimePicker.ValueChanged += new EventHandler(dateTimePicker_ValueChanged);
         }
 
-        private void comboBoxEspecialidad_SelectedIndexChanged(object sender, EventArgs e)
+        private void InitializeDateTimePicker()
         {
-            lblInfoEspecialidad.Text = "Ha seleccionado la especialidad: " + comboBoxEspecialidad.Text;
-        }
-
-        private void comboBoxMedico_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            lblInfoMedico.Text = "Ha seleccionado el médico/a: " + comboBoxMedico.Text;
+            dateTimePicker.MinDate = DateTime.Today;
+            dateTimePicker.MaxDate = DateTime.Today.AddMonths(6);
+            dateTimePicker.Value = DateTime.Today;
         }
 
         private void dateTimePicker_ValueChanged(object sender, EventArgs e)
         {
             listBox.Items.Clear();
 
-            TimeSpan startTime = new TimeSpan(9, 0, 0);
-            TimeSpan endTime = new TimeSpan(17, 0, 0);
-            TimeSpan interval = new TimeSpan(0, 30, 0);
+            TimeSpan startTime = new TimeSpan(9, 0, 0); // 9:00 AM
+            TimeSpan endTime = new TimeSpan(17, 0, 0); // 5:00 PM
+            TimeSpan interval = new TimeSpan(0, 30, 0); // Intervalo de 30 minutos
+
+            DateTime selectedDate = dateTimePicker.Value.Date;
+
+            if (selectedDate == DateTime.Today)
+            {
+                TimeSpan now = DateTime.Now.TimeOfDay;
+                startTime = now > startTime ? now : startTime;
+            }
 
             for (TimeSpan time = startTime; time < endTime; time += interval)
             {
-                listBox.Items.Add(time.ToString(@"hh\:mm"));
+                listBox.Items.Add(selectedDate.Add(time).ToString(@"hh\:mm"));
             }
         }
 
@@ -106,10 +113,8 @@ namespace Clinica_SePrice
             string selectedTime = listBox.SelectedItem.ToString();
             DateTime selectedDateTime = DateTime.Parse(selectedDate.ToShortDateString() + " " + selectedTime);
 
-            
+            int idPaciente = ObtenerIdPacientePorDni(textBoxDni.Text.Trim());
         }
-
-        
 
         private int ObtenerIdPacientePorDni(string dni)
         {

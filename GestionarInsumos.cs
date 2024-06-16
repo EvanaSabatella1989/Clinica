@@ -63,11 +63,10 @@ namespace Clinica_SePrice
 
         private void btnVolverMenu_Click(object sender, EventArgs e)
         {
-            this.Close();
-
             frmMenu menu = new frmMenu();
             menu.StartPosition = FormStartPosition.CenterScreen;
             menu.Show();
+            this.Close();
         }
 
         private void AgregarInsumoInicial(string idInsumo, string nombreInsumo, int cantidad)

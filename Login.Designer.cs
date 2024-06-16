@@ -60,7 +60,6 @@
             lblUsuario.Size = new Size(47, 15);
             lblUsuario.TabIndex = 2;
             lblUsuario.Text = "Usuario";
-            lblUsuario.Click += label1_Click;
             // 
             // lblContrasena
             // 
@@ -103,7 +102,6 @@
             Controls.Add(txtUsuario);
             Name = "Login";
             Text = "Ingreso Clinica SePrice";
-            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

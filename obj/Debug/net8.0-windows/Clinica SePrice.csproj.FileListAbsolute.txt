@@ -54,7 +54,6 @@ C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\runtimes\win-x64\na
 C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\runtimes\win-x64\native\krb5_64.dll
 C:\Users\mstei\Source\Repos\Clinica\bin\Debug\net8.0-windows\runtimes\win-x64\native\krbcc64.dll
 C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica SePrice.csproj.AssemblyReference.cache
-C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.Agenda.resources
 C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.GenerarTurno.resources
 C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.Login.resources
 C:\Users\mstei\Source\Repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.Properties.Resources.resources
@@ -83,3 +82,4 @@ C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frm
 C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmAgendarTurnoEstudios.resources
 C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmSeccion.resources
 C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmAgendaEstudiosClinicos.resources
+C:\Users\mstei\source\repos\Clinica\obj\Debug\net8.0-windows\Clinica_SePrice.frmAgendaConsultoriosExternos.resources

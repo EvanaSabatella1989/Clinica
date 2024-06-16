@@ -64,7 +64,6 @@
             label2.Size = new Size(109, 15);
             label2.TabIndex = 2;
             label2.Text = "Nombre de usuario";
-            label2.Click += label2_Click;
             // 
             // btnGestionDeInsumos
             // 
