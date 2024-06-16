@@ -17,24 +17,22 @@ namespace Clinica_SePrice
             Usuarios usuarios = new Usuarios();
             DataTable dt = new DataTable();
             Datos.Usuarios dato = new Datos.Usuarios();
-            //dt = dato.Login(txtUsuario.Text, txtContrasena.Text);
+            dt = dato.Login(txtUsuario.Text, txtContrasena.Text);
 
-            bool loginExitoso = true; 
-
-            if (loginExitoso)
+            if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("Ingreso exitoso");
+                string nUsuario = dt.Rows[0][1] != null ? dt.Rows[0][1].ToString() : "N/A";
+                Form menu = new frmMenu(nUsuario);
+                menu.ShowDialog();
 
-                frmMenu menu = new frmMenu();
-                menu.StartPosition = FormStartPosition.CenterScreen;
-                menu.Show();
-
-                this.Hide();
             }
             else
             {
-                MessageBox.Show("El usuario y/o contraseña es incorrecto");
+                MessageBox.Show("El usuario y/o contaseña incorrecto ");
+
+
             }
+
         }
     }
 }
