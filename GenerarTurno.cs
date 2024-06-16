@@ -161,7 +161,7 @@ namespace Clinica_SePrice
                 return;
             }
 
-            Datos.Turnos.CrearTurno( )
+            //Datos.Turnos.CrearTurno( )
 
             string especialidad = comboBoxEspecialidad.SelectedItem.ToString();
             string medico = comboBoxMedico.SelectedItem.ToString();
